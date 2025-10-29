@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.3a130fe4.css",
-    "main.js": "/Portfolio/static/js/main.596e1348.js",
+    "main.js": "/Portfolio/static/js/main.ba939c62.js",
     "static/css/64.bba8fa55.chunk.css": "/Portfolio/static/css/64.bba8fa55.chunk.css",
     "static/js/64.e90a1dab.chunk.js": "/Portfolio/static/js/64.e90a1dab.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/Portfolio/static/css/769.b3cbb36b.chunk.css",
@@ -12,6 +12,7 @@
     "static/media/Group-1-1.webp": "/Portfolio/static/media/Group-1-1.5ba2b731e97e960c7b77.webp",
     "static/media/uniroma2_logon.png": "/Portfolio/static/media/uniroma2_logon.d7e8c1d7e36312007a15.png",
     "static/media/manOnTable.svg": "/Portfolio/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/architecture-overview.png": "/Portfolio/static/media/architecture-overview.bc80f9a2e67138946d74.png",
     "static/media/contactMailDark.svg": "/Portfolio/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/Portfolio/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/googleAssistantLogo.webp": "/Portfolio/static/media/googleAssistantLogo.f720c71652579588524a.webp",
@@ -21,7 +22,7 @@
     "index.html": "/Portfolio/index.html",
     "static/media/talksCardBack.svg": "/Portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.3a130fe4.css.map": "/Portfolio/static/css/main.3a130fe4.css.map",
-    "main.596e1348.js.map": "/Portfolio/static/js/main.596e1348.js.map",
+    "main.ba939c62.js.map": "/Portfolio/static/js/main.ba939c62.js.map",
     "64.bba8fa55.chunk.css.map": "/Portfolio/static/css/64.bba8fa55.chunk.css.map",
     "64.e90a1dab.chunk.js.map": "/Portfolio/static/js/64.e90a1dab.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/Portfolio/static/css/769.b3cbb36b.chunk.css.map",
@@ -29,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.3a130fe4.css",
-    "static/js/main.596e1348.js"
+    "static/js/main.ba939c62.js"
   ]
 }
