@@ -165,13 +165,24 @@ const bigProjects = {
   subtitle: "PROJECTS I DEVELOPED DURING MY ACADEMIC AND PROFESSIONAL EXPERIENCE",
   projects: [
     {
-      image: require("./assets/images/AquaMaster.png"), // Aggiungi un'immagine rappresentativa del progetto
+      image: require("./assets/images/AquaMaster.png"),
       projectName: "AquaMaster",
       projectDesc: "A complete project developed during my university studies, featuring an Android app, servlet-based backend, and MySQL database.",
       footerLink: [
         {
           name: "View Repository",
           url: "https://github.com/catalinpop92/AquaMaster"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/architecture-overview.png"),
+      projectName: "Tesi di Laurea",
+      projectDesc: "The project explores the integration between BPMN engines and microservice architectures, focusing on Camunda Platform 8 as the orchestration engine.",
+      footerLink: [
+        {
+          name: "View Repository",
+          url: "https://github.com/catalinpop92/Tesi"
         }
       ]
     }
