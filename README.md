@@ -3,7 +3,7 @@
 This repository contains the source code of my personal portfolio website, built with **React**.  
 The site showcases my professional background, skills, and projects in the field of computer science and web development.
 
-👉 **Live website:** [https://catalinpop.github.io/Portfolio/](https://catalinpop.github.io/Portfolio/)
+👉 **Live website:** [https://catalinpop92.github.io/Portfolio/](https://catalinpop92.github.io/Portfolio/)
 
 ---
 
