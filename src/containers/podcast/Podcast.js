@@ -3,9 +3,11 @@ import "./Podcast.scss";
 import {podcastSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {useTranslation} from "react-i18next";
 
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
 
   if (!podcastSection)
     console.error("podcastSection object for Podcast section is missing");
@@ -17,7 +19,7 @@ export default function Podcast() {
     <Fade bottom duration={1000} distance="20px">
       <div className="main">
         <div className="podcast-header">
-          <h1 className="podcast-header-title">{podcastSection.title}</h1>
+          <h1 className="podcast-header-title">{t(podcastSection.title)}</h1>
           <p
             className={
               isDark
@@ -25,7 +27,7 @@ export default function Podcast() {
                 : "subTitle podcast-header-subtitle"
             }
           >
-            {podcastSection.subtitle}
+            {t(podcastSection.subtitle)}
           </p>
         </div>
         <div className="podcast-main-div">

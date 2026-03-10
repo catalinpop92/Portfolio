@@ -30,3 +30,11 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+@media (max-width: 475px) {
+  .project-title {
+    font-size: 19px;
+  }
+  .repo-cards-div-main {
+    grid-template-columns: 1fr;
+  }
+}

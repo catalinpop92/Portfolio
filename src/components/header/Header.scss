@@ -32,6 +32,14 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header li {
+  display: flex;
+  align-items: center;
 }
 
 .grey-color {
@@ -140,6 +148,13 @@
   max-height: 486px;
 }
 
+@media (max-width: 48em) {
+  .header .menu-btn:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent !important;
 }
@@ -178,5 +193,18 @@
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 14px 8px;
+    font-size: 16px;
+  }
+  .header li a {
+    padding: 18px 8px;
+    font-size: 15px;
+  }
+  .header .logo {
+    font-size: 1.1em;
   }
 }

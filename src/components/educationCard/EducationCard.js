@@ -2,15 +2,19 @@ import React, {createRef, useContext} from "react";
 import {Fade, Slide} from "react-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
+import { useTranslation } from 'react-i18next';
 
 export default function EducationCard({school}) {
   const imgRef = createRef();
+
+  // i18n
+  const { t } = useTranslation();
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets
       ? descBullets.map((item, i) => (
           <li key={i} className="subTitle">
-            {item}
+            {t(item)}
           </li>
         ))
       : null;
@@ -30,12 +34,12 @@ export default function EducationCard({school}) {
                 ref={imgRef}
                 className="education-roundedimg"
                 src={school.logo}
-                alt={school.schoolName}
+                alt={t(school.schoolName)}
               />
             </div>
           )}
           <div className="education-card-right">
-            <h5 className="education-text-school">{school.schoolName}</h5>
+            <h5 className="education-text-school">{t(school.schoolName)}</h5>
 
             <div className="education-text-details">
               <h5
@@ -45,7 +49,7 @@ export default function EducationCard({school}) {
                     : "education-text-subHeader"
                 }
               >
-                {school.subHeader}
+                {t(school.subHeader)}
               </h5>
               <p
                 className={`${
@@ -54,7 +58,7 @@ export default function EducationCard({school}) {
               >
                 {school.duration}
               </p>
-              <p className="education-text-desc">{school.desc}</p>
+              <p className="education-text-desc">{t(school.desc)}</p>
               <div className="education-text-bullets">
                 <ul>
                   <GetDescBullets descBullets={school.descBullets} />

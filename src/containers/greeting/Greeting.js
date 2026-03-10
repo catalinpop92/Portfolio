@@ -8,9 +8,11 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {useTranslation} from "react-i18next";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -24,7 +26,7 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
+                {t(greeting.title || "greeting.title")}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
               <p
@@ -34,12 +36,12 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
+                {t(greeting.subTitle || "greeting.subtitle")}
               </p>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <Button text={t("greeting.contact")} href="#contact" />
                 {greeting.resumeLink && (
                   <a
                     href={greeting.resumeLink}
@@ -47,7 +49,7 @@ export default function Greeting() {
                       rel="noopener noreferrer"
                       className="download-link-button"
                   >
-                    <Button text="Download my resume" />
+                    <Button text={t("greeting.downloadResume")} />
                   </a>
                 )}
               </div>

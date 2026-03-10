@@ -1,15 +1,23 @@
 import React from "react";
 import "./AchievementCard.scss";
+import { useTranslation } from 'react-i18next';
 
-export default function AchievementCard({cardInfo, isDark}) {
-  function openUrlInNewTab(url, name) {
-    if (!url) {
-      console.log(`URL for ${name} not found`);
-      return;
-    }
-    var win = window.open(url, "_blank");
+/* eslint-disable react/prop-types */
+
+function openUrlInNewTab(url, name) {
+  if (!url) {
+    console.log(`URL for ${name} not found`);
+    return;
+  }
+  const win = window.open(url, "_blank");
+  if (win) {
     win.focus();
   }
+}
+
+export default function AchievementCard({cardInfo, isDark}) {
+  const { t } = useTranslation();
+  const footerLinks = Array.isArray(cardInfo.footer) ? cardInfo.footer : [];
 
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
@@ -22,24 +30,25 @@ export default function AchievementCard({cardInfo, isDark}) {
       </div>
       <div className="certificate-detail-div">
         <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
-          {cardInfo.title}
+          {t(cardInfo.title)}
         </h5>
         <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
-          {cardInfo.description}
+          {t(cardInfo.description)}
         </p>
       </div>
       <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
+        {footerLinks.map(v => {
           return (
-            <span
-              key={i}
+            <button
+              key={`${v.name}-${v.url}`}
+              type="button"
               className={
                 isDark ? "dark-mode certificate-tag" : "certificate-tag"
               }
               onClick={() => openUrlInNewTab(v.url, v.name)}
             >
               {v.name}
-            </span>
+            </button>
           );
         })}
       </div>

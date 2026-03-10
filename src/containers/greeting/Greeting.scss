@@ -120,8 +120,38 @@
   }
 }
 
+@media (max-width: 375px) {
+  .greeting-text {
+    font-size: 22px;
+  }
+  .greeting-text-p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .greeting-main {
+    padding: 8px 3px;
+  }
+}
+
 @media (max-width: 320px) {
   .main {
     width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .button-greeting-div .main-button,
+  .button-greeting-div .download-link-button {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    box-sizing: border-box;
   }
 }

@@ -1,8 +1,11 @@
 import React, {useState, createRef} from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
+import { useTranslation } from 'react-i18next';
 
 export default function ExperienceCard({cardInfo, isDark}) {
+  const { t } = useTranslation();
+
   const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
 
@@ -24,7 +27,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
             key={i}
             className={isDark ? "subTitle dark-mode-text" : "subTitle"}
           >
-            {item}
+            {t(item)}
           </li>
         ))
       : null;
@@ -35,7 +38,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h5 className="experience-text-company">{t(cardInfo.company)}</h5>
         </div>
 
         <img
@@ -43,7 +46,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           ref={imgRef}
           className="experience-roundedimg"
           src={cardInfo.companylogo}
-          alt={cardInfo.company}
+          alt={t(cardInfo.company)}
           onLoad={() => getColorArrays()}
         />
       </div>
@@ -55,7 +58,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
               : "experience-text-role"
           }
         >
-          {cardInfo.role}
+          {t(cardInfo.role)}
         </h5>
         <h5
           className={
@@ -73,7 +76,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
               : "subTitle experience-text-desc"
           }
         >
-          {cardInfo.desc}
+          {t(cardInfo.desc)}
         </p>
         <ul>
           <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />

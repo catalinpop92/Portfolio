@@ -3,6 +3,9 @@ import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
+import {useTranslation} from "react-i18next";
+import i18n from "../../i18n";
+import LangSwitch from '../LangSwitch/LangSwitch';
 import {
   greeting,
   workExperiences,
@@ -16,6 +19,7 @@ import {
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -37,53 +41,68 @@ function Header() {
           className="menu-icon"
           htmlFor="menu-btn"
           style={{color: "white"}}
+          aria-label="Toggle navigation menu"
         >
+          <span
+            style={{
+              position: "absolute",
+              width: "1px",
+              height: "1px",
+              padding: 0,
+              margin: "-1px",
+              overflow: "hidden",
+              clip: "rect(0, 0, 0, 0)",
+              border: 0
+            }}
+          >
+            Toggle menu
+          </span>
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills">{t("header.skills")}</a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">{t("header.experience")}</a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#opensource">{t("header.opensource")}</a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">{t("header.achievements")}</a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
+              <a href="#blogs">{t("header.blogs")}</a>
             </li>
           )}
           {viewTalks && (
             <li>
-              <a href="#talks">Talks</a>
+              <a href="#talks">{t("header.talks")}</a>
             </li>
           )}
           {viewResume && (
             <li>
-              <a href="#resume">Resume</a>
+              <a href="#resume">{t("header.resume")}</a>
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">{t("header.contact")}</a>
           </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
+          <li style={{display: 'flex', gap: '16px', alignItems: 'center', justifyContent: 'center', padding: '0 12px'}}>
+            {/* Theme toggle */}
+            <ToggleSwitch mode="theme" />
+            {/* Language pill switch */}
+            <LangSwitch current={i18n.resolvedLanguage || i18n.language} onChange={(lang) => i18n.changeLanguage(lang)} />
           </li>
         </ul>
       </header>

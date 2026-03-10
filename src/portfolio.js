@@ -10,7 +10,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 1500 // Set animation duration as per your animation
 };
 
 // Summary And Greeting Section
@@ -21,12 +21,10 @@ const illustration = {
 
 const greeting = {
   username: "Catalin Ardelean Pop",
-  title: "Hi all, I'm Catalin",
-  subTitle: emoji(
-    "I am a recent Computer Science graduate from Università di Roma Tor Vergata 🎓 with experience as a Junior Developer."
-  ),
+  title: "greeting.title",
+  subTitle: "greeting.subtitle",
   resumeLink:
-    "https://drive.google.com/uc?export=download&id=1cCqYGppGCc0OsgM76bFFqhc1GJV2ENY9",
+    "https://drive.google.com/uc?export=download&id=18mhCE_w93jfvLASkO7R0920D7SObEv3b",
   displayGreeting: true
 };
 
@@ -34,10 +32,11 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/catalinpop92",
-  linkedin: "https://www.linkedin.com/in/catalinpop7/",
+  linkedin: "https://www.linkedin.com/in/catalin-pop7/",
   gmail: "catalin.pop927@gmail.com",
   //gitlab: "",
   //facebook: "",
+  instagram: "https://www.instagram.com/catalin_pop7/",
   //medium: "",
   //stackoverflow: "",
   display: true // Set true to display this section, defaults to false
@@ -46,39 +45,58 @@ const socialMediaLinks = {
 
 // Skills Section
 
+// Skills Section
 const skillsSection = {
-  title: "What I do",
-  subTitle: "Junior Developer with academic and professional experience",
+  title: "skills.title",
+  subTitle: "skills.subtitle",
   skills: [
-    emoji("⚡ Software development with Java, JavaScript, C, Python, and SQL"),
-    emoji("⚡ Web development using HTML, CSS, and web programming"),
-    emoji("⚡ Backend development with Node.js and database management with MySQL"),
-    emoji("⚡ Team collaboration in Agile environments and complete software lifecycle participation"),
-    emoji("⚡ Office Automation and project management tools"),
-    emoji("⚡ System administration and network architecture knowledge")
+    "skills.job.0",
+    "skills.job.1",
+    "skills.job.2",
+    "skills.job.3",
+    "skills.job.4",
+    "skills.job.5",
+    "skills.job.6",
+    "skills.job.7",
+    "skills.job.8"
   ],
 
   /* Include all technologies mentioned in the CV */
-  softwareSkills: [
-    { skillName: "Java", fontAwesomeClassname: "fas fa-coffee" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "C", fontAwesomeClassname: "fas fa-code" },
-    { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "HTML5", fontAwesomeClassname: "fab fa-html5" },
-    { skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt" },
-    { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "Express.js", fontAwesomeClassname: "fas fa-server" },
-    { skillName: "Git", fontAwesomeClassname: "fab fa-git" },
-    { skillName: "VSCode", fontAwesomeClassname: "fas fa-laptop-code" },
-    { skillName: "Eclipse", fontAwesomeClassname: "fas fa-laptop-code" },
-    { skillName: "Postman", fontAwesomeClassname: "fas fa-vial" },
-    { skillName: "Figma", fontAwesomeClassname: "fas fa-pencil-ruler" },
-    { skillName: "Camunda", fontAwesomeClassname: "fas fa-cogs" },
-  ],
-  display: true
+softwareSkills: [
+  // Linguaggi e sviluppo
+  { skillName: "Java", fontAwesomeClassname: "fas fa-coffee" },
+  { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
+  { skillName: "C", fontAwesomeClassname: "fas fa-code" },
+  { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
+  { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
+  { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
+  { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
+  { skillName: "HTML5", fontAwesomeClassname: "fab fa-html5" },
+  { skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt" },
+  { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
+  { skillName: "Express.js", fontAwesomeClassname: "fas fa-server" },
+
+  // Strumenti generali
+  { skillName: "Git", fontAwesomeClassname: "fab fa-git" },
+  { skillName: "VSCode", fontAwesomeClassname: "fas fa-laptop-code" },
+  { skillName: "Eclipse", fontAwesomeClassname: "fas fa-laptop-code" },
+  { skillName: "Postman", fontAwesomeClassname: "fas fa-vial" },
+  { skillName: "Figma", fontAwesomeClassname: "fas fa-pencil-ruler" },
+  { skillName: "Camunda", fontAwesomeClassname: "fas fa-cogs" },
+
+  // Cyber Security tools
+  { skillName: "Windows", fontAwesomeClassname: "fab fa-windows" },
+  { skillName: "Splunk", fontAwesomeClassname: "fas fa-chart-line" },
+  { skillName: "Nmap", fontAwesomeClassname: "fas fa-search" },
+  { skillName: "Metasploit", fontAwesomeClassname: "fas fa-bug" },
+  { skillName: "VirtualBox", fontAwesomeClassname: "fas fa-box" },
+  { skillName: "Nessus", fontAwesomeClassname: "fas fa-shield-alt" },
+  { skillName: "Kali Linux", fontAwesomeClassname: "fab fa-linux" },
+  { skillName: "Wireshark", fontAwesomeClassname: "fas fa-network-wired" },
+  { skillName: "Burp Suite", fontAwesomeClassname: "fas fa-shield-alt" },
+  { skillName: "Hydra", fontAwesomeClassname: "fas fa-lock" }
+],
+display: true
 };
 
 
@@ -88,18 +106,33 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "University of Rome Tor Vergata",
+      schoolName: "edu.card.0.schoolName",
       logo: require("./assets/images/uniroma2_logon.png"),
-      subHeader: "Bachelor's Degree in Computer Science",
-      duration: "July 2025",
-      desc: "Recently graduated with solid academic preparation in programming, software development, and IT systems management. Gained experience in software lifecycle, backend and database management, web programming, and collaborative Agile work environments.",
+      subHeader: "edu.card.0.subHeader",
+      duration: "2025",
+      desc: "edu.card.0.desc",
       descBullets: [
-        "Completed relevant coursework in software engineering, web and mobile application development, and database management",
-        "Acquired practical skills during internships and junior developer experience with NextAdv s.r.l.",
-        "Familiar with backend development using Node.js and MySQL",
-        "Gained experience in programming languages such as Java, JavaScript, C, and Python",
-        "Developed teamwork, problem-solving, time management, and communication skills through academic projects and professional experience",
-        "Understood software lifecycle processes, code versioning with Git, and deployment on test environments"
+        "edu.card.0.descBullets.0",
+        "edu.card.0.descBullets.1",
+        "edu.card.0.descBullets.2",
+        "edu.card.0.descBullets.3",
+        "edu.card.0.descBullets.4",
+        "edu.card.0.descBullets.5"
+      ]
+    },
+    {
+      schoolName: "edu.card.1.schoolName",
+      logo: require("./assets/images/EPICODE-pitto-color.webp"), // Inserisci il logo del Master
+      subHeader: "edu.card.1.subHeader",
+      duration: "2026",
+      desc: "edu.card.1.desc",
+      descBullets: [
+        "edu.card.1.descBullets.0",
+        "edu.card.1.descBullets.1",
+        "edu.card.1.descBullets.2",
+        "edu.card.1.descBullets.3",
+        "edu.card.1.descBullets.4",
+        "edu.card.1.descBullets.5"
       ]
     }
   ]
@@ -134,16 +167,16 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Junior Developer",
-      company: "NextAdv s.r.l.",
+      role: "work.card.0.role",
+      company: "work.card.0.company",
       companylogo: require("./assets/images/Group-1-1.webp"), // Sostituisci con il logo corretto
       date: "Nov 2021 – Nov 2023",
-      desc: "Worked as a junior developer, contributing to front-end development, testing, and quality assurance, while supporting the full software lifecycle.",
+      desc: "work.card.0.desc",
       descBullets: [
-        "Developed front-end interfaces and features using JavaScript, Java, and C",
-        "Carried out software testing, bug tracking, and quality assurance (Q&A)",
-        "Collaborated in Agile teams and multidisciplinary environments",
-        "Managed code using Git and performed deployments on test environments"
+        "work.card.0.descBullets.0",
+        "work.card.0.descBullets.1",
+        "work.card.0.descBullets.2",
+        "work.card.0.descBullets.3"
       ]
     }
   ]
@@ -161,27 +194,27 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "PROJECTS I DEVELOPED DURING MY ACADEMIC AND PROFESSIONAL EXPERIENCE",
+  title: "startup.title",
+  subtitle: "startup.subtitle",
   projects: [
     {
       image: require("./assets/images/AquaMaster.png"),
-      projectName: "AquaMaster",
-      projectDesc: "A complete project developed during my university studies, featuring an Android app, servlet-based backend, and MySQL database.",
+      projectName: "projects.card.0.projectName",
+      projectDesc: "projects.card.0.projectDesc",
       footerLink: [
         {
-          name: "View Repository",
+          name: "startup.link.viewRepository",
           url: "https://github.com/catalinpop92/AquaMaster"
         }
       ]
     },
     {
       image: require("./assets/images/architecture-overview.png"),
-      projectName: "Tesi di Laurea",
-      projectDesc: "The project explores the integration between BPMN engines and microservice architectures, focusing on Camunda Platform 8 as the orchestration engine.",
+      projectName: "projects.card.1.projectName",
+      projectDesc: "projects.card.1.projectDesc",
       footerLink: [
         {
-          name: "View Repository",
+          name: "startup.link.viewRepository",
           url: "https://github.com/catalinpop92/Tesi"
         }
       ]
@@ -201,9 +234,8 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+      title: "achievement.card.0.title",
+      subtitle: "achievement.card.0.subtitle",
       image: require("./assets/images/codeInLogo.webp"),
       imageAlt: "Google Code-In Logo",
       footerLink: [
@@ -222,9 +254,8 @@ const achievementSection = {
       ]
     },
     {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+      title: "achievement.card.1.title",
+      subtitle: "achievement.card.1.subtitle",
       image: require("./assets/images/googleAssistantLogo.webp"),
       imageAlt: "Google Assistant Action Logo",
       footerLink: [
@@ -236,8 +267,8 @@ const achievementSection = {
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
+      title: "achievement.card.2.title",
+      subtitle: "achievement.card.2.subtitle",
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
@@ -286,8 +317,8 @@ const talkSection = {
 
   talks: [
     {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
+      title: "talks.card.0.title",
+      subtitle: "talks.card.0.subtitle",
       slides_url: "https://bit.ly/saadpasta-slides",
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
@@ -298,8 +329,8 @@ const talkSection = {
 // Podcast Section
 
 const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  title: "podcast.title",
+  subtitle: "podcast.subtitle",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [

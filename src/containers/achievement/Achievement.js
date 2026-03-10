@@ -4,8 +4,10 @@ import AchievementCard from "../../components/achievementCard/AchievementCard";
 import {achievementSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {useTranslation} from "react-i18next";
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
   if (!achievementSection.display) {
     return null;
   }
@@ -21,7 +23,7 @@ export default function Achievement() {
                   : "heading achievement-heading"
               }
             >
-              {achievementSection.title}
+              {t('achievement.title')}
             </h1>
             <p
               className={
@@ -30,7 +32,7 @@ export default function Achievement() {
                   : "subTitle achievement-subtitle"
               }
             >
-              {achievementSection.subtitle}
+              {t('achievement.subtitle')}
             </p>
           </div>
           <div className="achievement-cards-div">
