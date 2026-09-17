@@ -1,0 +1,9 @@
+Questo strumento viene utilizzato per eseguire una scansione delle porte TCP di un host, con l’obiettivo di capire quali servizi risultano accessibili dalla rete.
+
+L’utente fornisce un indirizzo IP e un intervallo di porte; per ciascuna porta viene tentata una connessione TCP, che permette di stabilire rapidamente se la porta è aperta o chiusa.
+
+Quando una porta risulta aperta, viene verificato se è associata a un servizio noto e potenzialmente critico, come ad esempio servizi di amministrazione remota o database esposti. In questi casi il rischio viene evidenziato immediatamente.
+
+I risultati vengono mostrati in tempo reale a console e salvati in un file di log che riporta target, range di porte e tempi di scansione.
+
+In questo modo è possibile ottenere rapidamente una visione chiara dell’esposizione dei servizi di rete e individuare eventuali punti che meritano un’analisi più approfondita.

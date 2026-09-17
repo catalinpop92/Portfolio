@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.3e644ff6.css",
-    "main.js": "/Portfolio/static/js/main.f93e88a1.js",
+    "main.css": "/Portfolio/static/css/main.029c6773.css",
+    "main.js": "/Portfolio/static/js/main.6f5fe9f3.js",
     "static/css/64.c1c41b28.chunk.css": "/Portfolio/static/css/64.c1c41b28.chunk.css",
     "static/js/64.e90a1dab.chunk.js": "/Portfolio/static/js/64.e90a1dab.chunk.js",
     "static/css/769.227ca2d6.chunk.css": "/Portfolio/static/css/769.227ca2d6.chunk.css",
@@ -21,15 +21,15 @@
     "static/media/EPICODE-pitto-color.webp": "/Portfolio/static/media/EPICODE-pitto-color.57a76567bbe311c31a35.webp",
     "index.html": "/Portfolio/index.html",
     "static/media/talksCardBack.svg": "/Portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.3e644ff6.css.map": "/Portfolio/static/css/main.3e644ff6.css.map",
-    "main.f93e88a1.js.map": "/Portfolio/static/js/main.f93e88a1.js.map",
+    "main.029c6773.css.map": "/Portfolio/static/css/main.029c6773.css.map",
+    "main.6f5fe9f3.js.map": "/Portfolio/static/js/main.6f5fe9f3.js.map",
     "64.c1c41b28.chunk.css.map": "/Portfolio/static/css/64.c1c41b28.chunk.css.map",
     "64.e90a1dab.chunk.js.map": "/Portfolio/static/js/64.e90a1dab.chunk.js.map",
     "769.227ca2d6.chunk.css.map": "/Portfolio/static/css/769.227ca2d6.chunk.css.map",
     "769.8b15857d.chunk.js.map": "/Portfolio/static/js/769.8b15857d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e644ff6.css",
-    "static/js/main.f93e88a1.js"
+    "static/css/main.029c6773.css",
+    "static/js/main.6f5fe9f3.js"
   ]
 }
