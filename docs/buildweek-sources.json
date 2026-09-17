@@ -1,0 +1,180 @@
+{
+  "repository": "https://github.com/catalinpop92/CS0525",
+  "revision": "4725a44c66375ee34339196a9ef7b04f638b4d3c",
+  "files": [
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/01_http_scanner_BW.py",
+      "bytes": 5304,
+      "sha256": "c9cc896169f306c64206db23dd7a092d4f3deb2ad1e38b365b7520fac1a54a0a"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/02_port_scanner.py",
+      "bytes": 4444,
+      "sha256": "8d69046c67e1fceb9c0d9660bbae6f2605a64d4c3336dc02d09b4046c42fee46"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/03_socket_v2.py",
+      "bytes": 5719,
+      "sha256": "1f5551e0b3dd5f1be3b9b96e816d95da52582d98daccfbfd425b12c1fbe0aa7c"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/all_protocols_log.txt",
+      "bytes": 18568,
+      "sha256": "9071a20b2a7abceb5188770717d4bca5cf6302034983172c7ebd696e0774efcf"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/ESERCIZIO COMPLETO BUILDWEEK.pkt",
+      "bytes": 166609,
+      "sha256": "31b91877fc11f1275d851a89ccb6973a4054d09c6166d1b7d05dcfd0b812096b"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/httpscan_192.168.60.10_80__phpMyAdmin_themes_original_img_logo_right.png.txt",
+      "bytes": 1770,
+      "sha256": "5dfee3c054a0b1faf599014af4ddf2c7fe48431458338dce6989850d0b66b09f"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/port_scan.txt",
+      "bytes": 2000,
+      "sha256": "5311738aface810e59451ae2468bcc03a1b8dab20c8bc2fc077a83da8940ec20"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/Preventivo Theta versione enterprise.pdf",
+      "bytes": 260857,
+      "sha256": "f454845c3eafc2dff87e6f5ea558a69157a9ad5aa431be67debd3e287081c2e8"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/README.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/REPORT FINALE CISCO BW.pdf",
+      "bytes": 593820,
+      "sha256": "f54baf148fc51073142ade46ec24f030c1d2bb3816aed132252c7bd6cd2f0a56"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/Report_http.pdf",
+      "bytes": 48723,
+      "sha256": "e3d70fcf06cfdfd35ea43e354f3159dbe102e918c27cc349701ea69572ff435e"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/Report_Port_Scanner.pdf",
+      "bytes": 44494,
+      "sha256": "599423dcbcab8bee9e16adb2446d19953cae9a3bd79b0cef2c700f1d7de8809b"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/Report_Socket_Sniffer.pdf",
+      "bytes": 44919,
+      "sha256": "e79b23fc5069b837927c7702fa1f62c41623de359605daa18e0ffa690a2835f6"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/riassunto_http.txt",
+      "bytes": 1081,
+      "sha256": "b2a13f46639506a4fac99d7a7d50699dc5872081b627fd61f0a8f2491088ed3a"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/riassunto_port_scanner.txt",
+      "bytes": 924,
+      "sha256": "ceebce20105e7f240929b00b0dfdf1f5791026f8952dffae80e31bcc39b60e38"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/riassunto_socket_sniffer.txt",
+      "bytes": 890,
+      "sha256": "2e7f2e37a220a975e341d2dc20b0b8154a43e476d728e0c208ba1cbb94dc1b60"
+    },
+    {
+      "project": "buildweek-1",
+      "path": "UNIT_1/S4-buildweek/slide-finale.pdf",
+      "bytes": 5884974,
+      "sha256": "8193cfcaf3c43a0a223bddaae9cffefb89d2598b7460627b7e848ed1d885f9e6"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/black box HP.pdf",
+      "bytes": 903255,
+      "sha256": "c2c0c74f5e1e269037d38ec033d2ec8773f154821d637bf883cc1a6460a39fe7"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/BUILDWEEK 2 – GIORNO 4 - Documenti Google (1).pdf",
+      "bytes": 582206,
+      "sha256": "cac8c0142ab64e5c30663eca6b60e29e9d2246c8a26896b7bc1215c69fc26284"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/BUILDWEEK 2 – GIORNO 5 - Documenti Google.pdf",
+      "bytes": 1857570,
+      "sha256": "cad8e7f69e39300c036a152b89a24ed99853fcfd52027e7e696ef6117694d546"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/BWD1.pdf",
+      "bytes": 735103,
+      "sha256": "f565331bcc2df936f12feaac06b93ead9d47126823fe5000d892cd23a9b9841b"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/BWD2 U2.pdf",
+      "bytes": 637061,
+      "sha256": "9f424ac6507c7a41d561af34f58dfff3f296e42af6fb007f1ae69f30413ee2e2"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/Le Cronache di HogTheta (1).pdf",
+      "bytes": 1589239,
+      "sha256": "8c9ef9838a838504760ae437a457ed8ecba96022e6ae1deccceb15e1c399eb75"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/README.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/Report BOF_C.pdf",
+      "bytes": 523663,
+      "sha256": "a02ec91af9f489dd1673d49519f5d20504a3d3c97b46fb9de7ef39032262d966"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/report jangow01.pdf",
+      "bytes": 718494,
+      "sha256": "e1226f98e078a428ccc36a459ef18a4da375605b2b1b63ab9aa7a83983015abc"
+    },
+    {
+      "project": "buildweek-2",
+      "path": "UNIT_2/S8-buildweek/report-lupin-one (1).pdf",
+      "bytes": 2424412,
+      "sha256": "42c55a743e50c3ed083999a59f7fec292f334ddc2debc4f7bdb9ee607896b5a9"
+    },
+    {
+      "project": "buildweek-3",
+      "path": "UNIT_3/S12-buildweek/Buildweek3.pdf",
+      "bytes": 9883538,
+      "sha256": "bac8376f05b28ece6162b84214f19a2c6381a456a6efaf9eb14e149c5db51bcb"
+    },
+    {
+      "project": "buildweek-3",
+      "path": "UNIT_3/S12-buildweek/README.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

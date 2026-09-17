@@ -1,0 +1,7 @@
+Questo script è stato utilizzato per analizzare il comportamento di un servizio HTTP nell’ambito dell’analisi di sicurezza della compagnia Theta.
+
+A partire da un host, una porta e un path specifici, lo script invia diverse richieste HTTP per osservare come il server risponde ai vari metodi. In particolare, il metodo OPTIONS viene utilizzato per identificare quali metodi sono supportati dal servizio, fornendo una prima indicazione sulla superficie di attacco.
+
+Successivamente vengono analizzati i metodi GET, POST, PUT e DELETE, valutando gli status code restituiti, i messaggi di risposta e una porzione controllata del contenuto. Tutti i risultati vengono registrati in un file di log ordinato, che riporta anche l’orario di inizio, di fine e la durata complessiva della scansione.
+
+Lo script include inoltre una gestione degli errori di rete, permettendo di documentare anche eventuali problemi di connessione. Nel complesso, rappresenta uno strumento efficace per ottenere una prima visione dello stato di esposizione di un servizio web della compagnia Theta.

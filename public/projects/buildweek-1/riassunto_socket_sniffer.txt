@@ -1,0 +1,6 @@
+Questo strumento consente di monitorare il traffico di rete intercettando i pacchetti direttamente a livello Ethernet, prima che vengano elaborati dallo stack del sistema operativo.
+Ogni pacchetto viene registrato con un identificativo progressivo e un timestamp ad alta precisione, permettendo di ricostruire con accuratezza la sequenza temporale delle comunicazioni.
+
+Il traffico IPv4 viene analizzato estraendo le informazioni principali dall’header IP e, in base al protocollo di livello superiore, viene effettuata un’analisi specifica per TCP, UDP o ICMP. Per TCP e UDP vengono registrate porte e dimensione del payload, mentre per ICMP vengono analizzati tipo e codice del messaggio.
+
+Nel complesso, lo strumento fornisce una visione chiara e dettagliata del traffico di rete a basso livello ed è utile per attività di monitoraggio, troubleshooting e analisi di sicurezza.

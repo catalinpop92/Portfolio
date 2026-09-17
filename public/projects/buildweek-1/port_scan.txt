@@ -1,0 +1,89 @@
+Scansione porte
+Target: 192.168.60.10
+Porte: 20-100
+Ora inizio: 2025-12-19 06:26:13.694752
+----------------------------------------
+Porta 20: CHIUSA
+Porta 21: APERTA - FTP | Rischio: Protocollo in chiaro, brute force
+Porta 22: APERTA - SSH | Rischio: Target comune per brute force
+Porta 23: APERTA - Telnet | Rischio: NON cifrato, molto insicuro
+Porta 24: CHIUSA
+Porta 25: APERTA - SMTP | Rischio: Possibile abuso relay
+Porta 26: CHIUSA
+Porta 27: CHIUSA
+Porta 28: CHIUSA
+Porta 29: CHIUSA
+Porta 30: CHIUSA
+Porta 31: CHIUSA
+Porta 32: CHIUSA
+Porta 33: CHIUSA
+Porta 34: CHIUSA
+Porta 35: CHIUSA
+Porta 36: CHIUSA
+Porta 37: CHIUSA
+Porta 38: CHIUSA
+Porta 39: CHIUSA
+Porta 40: CHIUSA
+Porta 41: CHIUSA
+Porta 42: CHIUSA
+Porta 43: CHIUSA
+Porta 44: CHIUSA
+Porta 45: CHIUSA
+Porta 46: CHIUSA
+Porta 47: CHIUSA
+Porta 48: CHIUSA
+Porta 49: CHIUSA
+Porta 50: CHIUSA
+Porta 51: CHIUSA
+Porta 52: CHIUSA
+Porta 53: APERTA - DNS | Rischio: Rischi di misconfigurazione
+Porta 54: CHIUSA
+Porta 55: CHIUSA
+Porta 56: CHIUSA
+Porta 57: CHIUSA
+Porta 58: CHIUSA
+Porta 59: CHIUSA
+Porta 60: CHIUSA
+Porta 61: CHIUSA
+Porta 62: CHIUSA
+Porta 63: CHIUSA
+Porta 64: CHIUSA
+Porta 65: CHIUSA
+Porta 66: CHIUSA
+Porta 67: CHIUSA
+Porta 68: CHIUSA
+Porta 69: CHIUSA
+Porta 70: CHIUSA
+Porta 71: CHIUSA
+Porta 72: CHIUSA
+Porta 73: CHIUSA
+Porta 74: CHIUSA
+Porta 75: CHIUSA
+Porta 76: CHIUSA
+Porta 77: CHIUSA
+Porta 78: CHIUSA
+Porta 79: CHIUSA
+Porta 80: APERTA - HTTP | Rischio: Vulnerabilità applicative
+Porta 81: CHIUSA
+Porta 82: CHIUSA
+Porta 83: CHIUSA
+Porta 84: CHIUSA
+Porta 85: CHIUSA
+Porta 86: CHIUSA
+Porta 87: CHIUSA
+Porta 88: CHIUSA
+Porta 89: CHIUSA
+Porta 90: CHIUSA
+Porta 91: CHIUSA
+Porta 92: CHIUSA
+Porta 93: CHIUSA
+Porta 94: CHIUSA
+Porta 95: CHIUSA
+Porta 96: CHIUSA
+Porta 97: CHIUSA
+Porta 98: CHIUSA
+Porta 99: CHIUSA
+Porta 100: CHIUSA
+----------------------------------------
+Fine scansione: 2025-12-19 06:26:13.727662
+----------------------------------------

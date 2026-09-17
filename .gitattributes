@@ -5,4 +5,11 @@
 *.png binary
 *.webp binary
 *.woff binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.zip binary
+*.pkt binary
 
+# Preserve original lab files and archives byte-for-byte.
+public/projects/** binary

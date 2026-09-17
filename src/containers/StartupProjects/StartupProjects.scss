@@ -64,6 +64,15 @@
   gap: 1rem 1rem;
 }
 
+.project-card-reveal {
+  display: flex;
+  min-width: 0;
+}
+.project-card-reveal > .project-card {
+  flex: 1;
+  min-width: 0;
+}
+
 .project-card-footer .project-tag {
   background: $buttonColor;
   color: $lightBackground3;

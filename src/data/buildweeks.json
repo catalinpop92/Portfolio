@@ -1,0 +1,341 @@
+{
+  "repository": "https://github.com/catalinpop92/CS0525",
+  "revision": "4725a44c66375ee34339196a9ef7b04f638b4d3c",
+  "projects": [
+    {
+      "id": "buildweek-1",
+      "unit": 1,
+      "folder": "UNIT_1/S4-buildweek",
+      "icon": "fas fa-network-wired",
+      "tools": ["Cisco Packet Tracer", "Python", "VLAN / ACL", "TCP/IP"],
+      "groups": [
+        {
+          "title": "buildweeks.group.design",
+          "files": [
+            {
+              "file": "slide-finale.pdf",
+              "title": "buildweeks.buildweek-1.file.design.0",
+              "bytes": 5884974,
+              "type": "PDF",
+              "pages": 22
+            },
+            {
+              "file": "REPORT FINALE CISCO BW.pdf",
+              "title": "buildweeks.buildweek-1.file.design.1",
+              "bytes": 593820,
+              "type": "PDF",
+              "pages": 8
+            },
+            {
+              "file": "ESERCIZIO COMPLETO BUILDWEEK.pkt",
+              "title": "buildweeks.buildweek-1.file.design.2",
+              "bytes": 166609,
+              "type": "PKT"
+            },
+            {
+              "file": "Preventivo Theta versione enterprise.pdf",
+              "title": "buildweeks.buildweek-1.file.design.3",
+              "bytes": 260857,
+              "type": "PDF",
+              "pages": 8
+            }
+          ]
+        },
+        {
+          "title": "buildweeks.group.python",
+          "files": [
+            {
+              "file": "01_http_scanner_BW.py",
+              "title": "buildweeks.buildweek-1.file.python.0",
+              "bytes": 5304,
+              "type": "PY"
+            },
+            {
+              "file": "02_port_scanner.py",
+              "title": "buildweeks.buildweek-1.file.python.1",
+              "bytes": 4444,
+              "type": "PY"
+            },
+            {
+              "file": "03_socket_v2.py",
+              "title": "buildweeks.buildweek-1.file.python.2",
+              "bytes": 5719,
+              "type": "PY"
+            },
+            {
+              "file": "Report_http.pdf",
+              "title": "buildweeks.buildweek-1.file.python.3",
+              "bytes": 48723,
+              "type": "PDF",
+              "pages": 1
+            },
+            {
+              "file": "Report_Port_Scanner.pdf",
+              "title": "buildweeks.buildweek-1.file.python.4",
+              "bytes": 44494,
+              "type": "PDF",
+              "pages": 1
+            },
+            {
+              "file": "Report_Socket_Sniffer.pdf",
+              "title": "buildweeks.buildweek-1.file.python.5",
+              "bytes": 44919,
+              "type": "PDF",
+              "pages": 1
+            },
+            {
+              "file": "riassunto_http.txt",
+              "title": "buildweeks.buildweek-1.file.python.6",
+              "bytes": 1081,
+              "type": "TXT"
+            },
+            {
+              "file": "riassunto_port_scanner.txt",
+              "title": "buildweeks.buildweek-1.file.python.7",
+              "bytes": 924,
+              "type": "TXT"
+            },
+            {
+              "file": "riassunto_socket_sniffer.txt",
+              "title": "buildweeks.buildweek-1.file.python.8",
+              "bytes": 890,
+              "type": "TXT"
+            }
+          ]
+        },
+        {
+          "title": "buildweeks.group.evidence",
+          "files": [
+            {
+              "file": "port_scan.txt",
+              "title": "buildweeks.buildweek-1.file.evidence.0",
+              "bytes": 2000,
+              "type": "TXT"
+            },
+            {
+              "file": "httpscan_192.168.60.10_80__phpMyAdmin_themes_original_img_logo_right.png.txt",
+              "title": "buildweeks.buildweek-1.file.evidence.1",
+              "bytes": 1770,
+              "type": "TXT"
+            },
+            {
+              "file": "all_protocols_log.txt",
+              "title": "buildweeks.buildweek-1.file.evidence.2",
+              "bytes": 18568,
+              "type": "TXT"
+            }
+          ]
+        }
+      ],
+      "title": "buildweeks.buildweek-1.title",
+      "description": "buildweeks.buildweek-1.description",
+      "overview": "buildweeks.buildweek-1.overview",
+      "activities": [
+        "buildweeks.buildweek-1.activity.0",
+        "buildweeks.buildweek-1.activity.1",
+        "buildweeks.buildweek-1.activity.2",
+        "buildweeks.buildweek-1.activity.3"
+      ],
+      "role": "buildweeks.role.teamLeader"
+    },
+    {
+      "id": "buildweek-2",
+      "unit": 2,
+      "folder": "UNIT_2/S8-buildweek",
+      "icon": "fas fa-bug",
+      "tools": ["Nmap", "Nessus", "Burp Suite", "Metasploit"],
+      "groups": [
+        {
+          "title": "buildweeks.group.blackbox",
+          "files": [
+            {
+              "file": "black box HP.pdf",
+              "title": "buildweeks.buildweek-2.file.blackbox.0",
+              "bytes": 903255,
+              "type": "PDF",
+              "pages": 8
+            },
+            {
+              "file": "Le Cronache di HogTheta (1).pdf",
+              "title": "buildweeks.buildweek-2.file.blackbox.1",
+              "bytes": 1589239,
+              "type": "PDF",
+              "pages": 6
+            },
+            {
+              "file": "report jangow01.pdf",
+              "title": "buildweeks.buildweek-2.file.blackbox.2",
+              "bytes": 718494,
+              "type": "PDF",
+              "pages": 8
+            },
+            {
+              "file": "report-lupin-one (1).pdf",
+              "title": "buildweeks.buildweek-2.file.blackbox.3",
+              "bytes": 2424412,
+              "type": "PDF",
+              "pages": 7
+            }
+          ]
+        },
+        {
+          "title": "buildweeks.group.web",
+          "files": [
+            {
+              "file": "BWD1.pdf",
+              "title": "buildweeks.buildweek-2.file.web.0",
+              "bytes": 735103,
+              "type": "PDF",
+              "pages": 6
+            },
+            {
+              "file": "BWD2 U2.pdf",
+              "title": "buildweeks.buildweek-2.file.web.1",
+              "bytes": 637061,
+              "type": "PDF",
+              "pages": 5
+            },
+            {
+              "file": "BUILDWEEK 2 – GIORNO 4 - Documenti Google (1).pdf",
+              "title": "buildweeks.buildweek-2.file.web.2",
+              "bytes": 582206,
+              "type": "PDF",
+              "pages": 4
+            },
+            {
+              "file": "BUILDWEEK 2 – GIORNO 5 - Documenti Google.pdf",
+              "title": "buildweeks.buildweek-2.file.web.3",
+              "bytes": 1857570,
+              "type": "PDF",
+              "pages": 7
+            }
+          ]
+        },
+        {
+          "title": "buildweeks.group.code",
+          "files": [
+            {
+              "file": "Report BOF_C.pdf",
+              "title": "buildweeks.buildweek-2.file.code.0",
+              "bytes": 523663,
+              "type": "PDF",
+              "pages": 12
+            }
+          ]
+        }
+      ],
+      "title": "buildweeks.buildweek-2.title",
+      "description": "buildweeks.buildweek-2.description",
+      "overview": "buildweeks.buildweek-2.overview",
+      "activities": [
+        "buildweeks.buildweek-2.activity.0",
+        "buildweeks.buildweek-2.activity.1",
+        "buildweeks.buildweek-2.activity.2",
+        "buildweeks.buildweek-2.activity.3"
+      ],
+      "highlights": [
+        {
+          "id": "hogtheta",
+          "icon": "fas fa-hat-wizard",
+          "title": "buildweeks.challenge.hogtheta.title",
+          "description": "buildweeks.challenge.hogtheta.description",
+          "files": ["black box HP.pdf", "Le Cronache di HogTheta (1).pdf"]
+        },
+        {
+          "id": "jangow",
+          "icon": "fas fa-search",
+          "title": "buildweeks.challenge.jangow.title",
+          "description": "buildweeks.challenge.jangow.description",
+          "files": ["report jangow01.pdf"]
+        },
+        {
+          "id": "lupin",
+          "icon": "fas fa-key",
+          "title": "buildweeks.challenge.lupin.title",
+          "description": "buildweeks.challenge.lupin.description",
+          "files": ["report-lupin-one (1).pdf"]
+        }
+      ]
+    },
+    {
+      "id": "buildweek-3",
+      "unit": 3,
+      "folder": "UNIT_3/S12-buildweek",
+      "icon": "fas fa-fingerprint",
+      "tools": ["Wireshark", "ANY.RUN", "dnSpy", "Process Monitor"],
+      "groups": [
+        {
+          "title": "buildweeks.group.report",
+          "files": [
+            {
+              "file": "Buildweek3.pdf",
+              "title": "buildweeks.buildweek-3.file.report.0",
+              "bytes": 9883538,
+              "type": "PDF",
+              "pages": 92
+            }
+          ]
+        }
+      ],
+      "chapters": [
+        {
+          "page": 4,
+          "title": "buildweeks.buildweek-3.chapter.0"
+        },
+        {
+          "page": 16,
+          "title": "buildweeks.buildweek-3.chapter.1"
+        },
+        {
+          "page": 20,
+          "title": "buildweeks.buildweek-3.chapter.2"
+        },
+        {
+          "page": 23,
+          "title": "buildweeks.buildweek-3.chapter.3"
+        },
+        {
+          "page": 26,
+          "title": "buildweeks.buildweek-3.chapter.4"
+        },
+        {
+          "page": 31,
+          "title": "buildweeks.buildweek-3.chapter.5"
+        },
+        {
+          "page": 36,
+          "title": "buildweeks.buildweek-3.chapter.6"
+        },
+        {
+          "page": 42,
+          "title": "buildweeks.buildweek-3.chapter.7"
+        },
+        {
+          "page": 50,
+          "title": "buildweeks.buildweek-3.chapter.8"
+        },
+        {
+          "page": 57,
+          "title": "buildweeks.buildweek-3.chapter.9"
+        },
+        {
+          "page": 69,
+          "title": "buildweeks.buildweek-3.chapter.10"
+        },
+        {
+          "page": 84,
+          "title": "buildweeks.buildweek-3.chapter.11"
+        }
+      ],
+      "title": "buildweeks.buildweek-3.title",
+      "description": "buildweeks.buildweek-3.description",
+      "overview": "buildweeks.buildweek-3.overview",
+      "activities": [
+        "buildweeks.buildweek-3.activity.0",
+        "buildweeks.buildweek-3.activity.1",
+        "buildweeks.buildweek-3.activity.2",
+        "buildweeks.buildweek-3.activity.3"
+      ]
+    }
+  ]
+}
