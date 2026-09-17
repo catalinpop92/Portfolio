@@ -1,32 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
+import useReducedMotion from "../../hooks/useReducedMotion";
 import "./Top.scss";
 
 export default function Top() {
-  function TopEvent() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
-  // When the user scrolls down 20px from the top of the document, show the button
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      document.getElementById("topButton").style.visibility = "visible";
-    } else {
-      document.getElementById("topButton").style.visibility = "hidden";
-    }
-  }
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  window.onload = function () {
-    scrollFunction();
-  }; //To make sure that this button is not visible at starting.
-  // When the user clicks on the button, scroll to the top of the document
+  const [visible, setVisible] = useState(false);
+  const reducedMotion = useReducedMotion();
+  const {t} = useTranslation();
+  useEffect(() => {
+    const update = () => setVisible(window.scrollY > 500);
+    update();
+    window.addEventListener("scroll", update, {passive: true});
+    return () => window.removeEventListener("scroll", update);
+  }, []);
   return (
-    <button onClick={TopEvent} id="topButton" title="Go to top">
-      <i className="fas fa-hand-point-up" aria-hidden="true"></i>
+    <button
+      onClick={() =>
+        window.scrollTo({
+          top: 0,
+          behavior: reducedMotion ? "instant" : "smooth"
+        })
+      }
+      id="topButton"
+      style={{visibility: visible ? "visible" : "hidden"}}
+      aria-label={t("navigation.top")}
+      title={t("navigation.top")}
+    >
+      <i className="fas fa-arrow-up" aria-hidden="true" />
     </button>
   );
 }

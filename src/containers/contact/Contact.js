@@ -16,7 +16,7 @@ export default function Contact() {
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">
-            <h1 className="heading contact-title">{t('contact.title')}</h1>
+            <h2 className="heading contact-title">{t('contact.title')}</h2>
             <p
               className={
                 isDark

@@ -6,14 +6,6 @@ import StyleContext from "../../contexts/StyleContext";
 import {useTranslation} from "react-i18next";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
-    if (!url) {
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
-
   const {isDark} = useContext(StyleContext);
   const {t} = useTranslation();
   if (!bigProjects.display) {
@@ -23,14 +15,8 @@ export default function StartupProject() {
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="projects">
         <div>
-          <h1 className="skills-heading">{t(bigProjects.title)}</h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode project-subtitle"
-                : undefined
-            }
-          >
+          <h2 className="skills-heading">{t(bigProjects.title)}</h2>
+          <p className={isDark ? "dark-mode project-subtitle" : undefined}>
             {bigProjects.subtitle ? t(bigProjects.subtitle) : ""}
           </p>
 
@@ -51,6 +37,8 @@ export default function StartupProject() {
                         src={project.image}
                         alt={t(project.projectName)}
                         className="card-image"
+                        loading="lazy"
+                        decoding="async"
                       ></img>
                     </div>
                   ) : null}
@@ -71,15 +59,17 @@ export default function StartupProject() {
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
                           return (
-                            <span
+                            <a
                               key={i}
                               className={
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
-                              onClick={() => openUrlInNewTab(link.url)}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {t(link.name)}
-                            </span>
+                            </a>
                           );
                         })}
                       </div>

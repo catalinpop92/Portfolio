@@ -1,12 +1,10 @@
 import React, {useContext} from "react";
 import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import SecurityVisual from "../../components/securityVisual/SecurityVisual";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import {greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import {useTranslation} from "react-i18next";
 
@@ -27,43 +25,39 @@ export default function Greeting() {
               >
                 {" "}
                 {t(greeting.title || "greeting.title")}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
-                {t(greeting.subTitle || "greeting.subtitle")}
-              </p>
+              <h2 className="greeting-role">{t("greeting.role")}</h2>
+              {t(greeting.subTitle || "greeting.subtitle")
+                .split("\n\n")
+                .map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className={
+                      isDark
+                        ? "dark-mode greeting-text-p"
+                        : "greeting-text-p subTitle"
+                    }
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text={t("greeting.contact")} href="#contact" />
                 {greeting.resumeLink && (
-                  <a
+                  <Button
+                    text={t("greeting.downloadResume")}
                     href={greeting.resumeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="download-link-button"
-                  >
-                    <Button text={t("greeting.downloadResume")} />
-                  </a>
+                    newTab
+                    className="download-link-button"
+                  />
                 )}
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
-            )}
+            <SecurityVisual />
           </div>
         </div>
       </div>

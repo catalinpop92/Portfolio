@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import emoji from "react-easy-emoji";
 import StyleContext from "../../contexts/StyleContext";
 import "./ToggleSwitch.scss";
+import {useTranslation} from "react-i18next";
 
 /* eslint-disable react/prop-types */
 
@@ -20,6 +21,7 @@ const ToggleSwitch = ({
 }) => {
   // Theme mode: fallback to context, legacy for backward compatibility
   const styleContext = useContext(StyleContext);
+  const {t} = useTranslation();
   const isContextTheme = mode === "theme" && checked === undefined;
   const value = isContextTheme ? styleContext.isDark : checked;
 
@@ -56,6 +58,7 @@ const ToggleSwitch = ({
       </span>
       <input
         type="checkbox"
+        aria-label={t("navigation.theme")}
         checked={!!value}
         onChange={handleToggle}
       />

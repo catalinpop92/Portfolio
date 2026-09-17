@@ -24,7 +24,7 @@ const greeting = {
   title: "greeting.title",
   subTitle: "greeting.subtitle",
   resumeLink:
-    "https://drive.google.com/uc?export=download&id=18mhCE_w93jfvLASkO7R0920D7SObEv3b",
+    "https://drive.google.com/uc?export=download&id=1d5QG-L2EmTSvh81hhNDtgHQY_-dndln2",
   displayGreeting: true
 };
 
@@ -44,59 +44,32 @@ const socialMediaLinks = {
 
 
 // Skills Section
-
-// Skills Section
 const skillsSection = {
   title: "skills.title",
   subTitle: "skills.subtitle",
-  skills: [
-    "skills.job.0",
-    "skills.job.1",
-    "skills.job.2",
-    "skills.job.3",
-    "skills.job.4",
-    "skills.job.5",
-    "skills.job.6",
-    "skills.job.7",
-    "skills.job.8"
+  areas: [
+    {id: "monitoring", icon: "fas fa-chart-line"},
+    {id: "hunting", icon: "fas fa-search"},
+    {id: "endpoint", icon: "fas fa-laptop-code"},
+    {id: "network", icon: "fas fa-network-wired"},
+    {id: "incidents", icon: "fas fa-shield-alt"},
+    {id: "intelligence", icon: "fas fa-fingerprint"}
   ],
-
-  /* Include all technologies mentioned in the CV */
-softwareSkills: [
-  // Linguaggi e sviluppo
-  { skillName: "Java", fontAwesomeClassname: "fas fa-coffee" },
-  { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-  { skillName: "C", fontAwesomeClassname: "fas fa-code" },
-  { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-  { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
-  { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
-  { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
-  { skillName: "HTML5", fontAwesomeClassname: "fab fa-html5" },
-  { skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt" },
-  { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
-  { skillName: "Express.js", fontAwesomeClassname: "fas fa-server" },
-
-  // Strumenti generali
-  { skillName: "Git", fontAwesomeClassname: "fab fa-git" },
-  { skillName: "VSCode", fontAwesomeClassname: "fas fa-laptop-code" },
-  { skillName: "Eclipse", fontAwesomeClassname: "fas fa-laptop-code" },
-  { skillName: "Postman", fontAwesomeClassname: "fas fa-vial" },
-  { skillName: "Figma", fontAwesomeClassname: "fas fa-pencil-ruler" },
-  { skillName: "Camunda", fontAwesomeClassname: "fas fa-cogs" },
-
-  // Cyber Security tools
-  { skillName: "Windows", fontAwesomeClassname: "fab fa-windows" },
-  { skillName: "Splunk", fontAwesomeClassname: "fas fa-chart-line" },
-  { skillName: "Nmap", fontAwesomeClassname: "fas fa-search" },
-  { skillName: "Metasploit", fontAwesomeClassname: "fas fa-bug" },
-  { skillName: "VirtualBox", fontAwesomeClassname: "fas fa-box" },
-  { skillName: "Nessus", fontAwesomeClassname: "fas fa-shield-alt" },
-  { skillName: "Kali Linux", fontAwesomeClassname: "fab fa-linux" },
-  { skillName: "Wireshark", fontAwesomeClassname: "fas fa-network-wired" },
-  { skillName: "Burp Suite", fontAwesomeClassname: "fas fa-shield-alt" },
-  { skillName: "Hydra", fontAwesomeClassname: "fas fa-lock" }
-],
-display: true
+  toolGroups: [
+    {
+      title: "skills.tools.operations",
+      tools: ["IBM QRadar", "Cynet EDR", "Microsoft Defender", "MISP", "F5 ASM/WAF", "Radware AppWall", "FortiGate", "Forcepoint / Check Point Proxy", "Cisco Umbrella", "PSIM"]
+    },
+    {
+      title: "skills.tools.training",
+      tools: ["Splunk", "Wireshark", "Nmap", "Nessus", "Metasploit", "Burp Suite", "Hydra", "Kali Linux", "VirtualBox"]
+    },
+    {
+      title: "skills.tools.development",
+      tools: ["Python", "JavaScript", "Java", "C", "SQL", "Node.js", "Express.js", "MySQL", "MongoDB", "HTML5", "CSS3", "Git", "Linux", "Windows"]
+    }
+  ],
+  display: true
 };
 
 
@@ -167,10 +140,25 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "work.soc.role",
+      company: "work.soc.company",
+      companylogo: require("./assets/images/netgroup-logo.jpeg"),
+      bannerImage: require("./assets/images/netgroup-banner.jpeg"),
+      date: "work.current",
+      desc: "work.soc.desc",
+      descBullets: [
+        "work.soc.bullet.0",
+        "work.soc.bullet.1",
+        "work.soc.bullet.2",
+        "work.soc.bullet.3",
+        "work.soc.bullet.4"
+      ]
+    },
+    {
       role: "work.card.0.role",
       company: "work.card.0.company",
       companylogo: require("./assets/images/Group-1-1.webp"), // Sostituisci con il logo corretto
-      date: "Nov 2021 – Nov 2023",
+      date: "work.card.0.date",
       desc: "work.card.0.desc",
       descBullets: [
         "work.card.0.descBullets.0",

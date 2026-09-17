@@ -12,6 +12,7 @@ const LangSwitch = ({ current, onChange }) => {
         className={currentLang === "en" ? "active" : ""}
         onClick={() => currentLang !== "en" && onChange("en")}
         aria-pressed={currentLang === "en"}
+        aria-label="English"
       >
         EN
       </button>
@@ -19,6 +20,7 @@ const LangSwitch = ({ current, onChange }) => {
         className={currentLang === "it" ? "active" : ""}
         onClick={() => currentLang !== "it" && onChange("it")}
         aria-pressed={currentLang === "it"}
+        aria-label="Italiano"
       >
         IT
       </button>

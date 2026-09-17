@@ -64,7 +64,7 @@
   gap: 1rem 1rem;
 }
 
-.project-card-footer span.project-tag {
+.project-card-footer .project-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -87,7 +87,7 @@
     font-size: 16px;
     text-align: center;
   }
-  .project-card-footer span.project-tag {
+  .project-card-footer .project-tag {
     font-size: 1.1rem;
     height: 2.7em;
     padding: 0 1.4em;

@@ -1,157 +1,94 @@
-@import "../../_globalColor";
+﻿@import "../../_globalColor";
 
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 4rem;
+  margin: 4rem auto 0;
 }
+
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  padding: 56px 0 40px;
+  margin: 0 auto;
 }
 
 .greeting-main {
-  display: flex;
-}
-
-.subTitle {
-  color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
-}
-
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.empty-div {
-  margin-bottom: 40px;
-}
-
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
-}
-.download-link-button {
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
 }
 
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
+  font-size: clamp(30px, 3.5vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin: 0 0 16px;
 }
 
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+.greeting-role {
+  color: var(--accent);
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.5;
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 400;
+  margin: 0 0 20px;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
+.portfolio-site .greeting-text-p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 16px;
 }
 
-.wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  transform-origin: 70% 70%;
+.empty-div { margin-bottom: 20px; }
+.greeting-text-div .social-media-div { display: flex; gap: 10px; }
+.greeting-text-div .icon-button,
+.greeting-text-div .icon-button i { margin: 0; }
+.button-greeting-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+.button-greeting-div .main-button {
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 14px;
 }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.security-visual {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  color: var(--accent);
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background-color: var(--surface);
+  background-image:
+    radial-gradient(ellipse at center, var(--accent-soft), transparent 70%),
+    linear-gradient(var(--accent-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-soft) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
 }
+.security-visual svg { width: 100%; height: auto; display: block; }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-  .greeting-main {
-    display: block;
-  }
-  .greeting-image-div {
-    height: 256px;
-  }
-}
-
-@media (max-width: 375px) {
-  .greeting-text {
-    font-size: 22px;
-  }
-  .greeting-text-p {
-    font-size: 13px;
-    line-height: 18px;
-  }
-  .greeting-main {
-    padding: 8px 3px;
-  }
-}
-
-@media (max-width: 320px) {
-  .main {
-    width: auto;
-  }
+@media (max-width: 900px) {
+  .greeting-main { grid-template-columns: 1fr; gap: 28px; }
+  .greet-main { padding-top: 40px; }
+  .greeting-text-div { max-width: 660px; margin: 0 auto; }
+  .greeting-image-div { width: min(100%, 280px); margin: 0 auto; }
 }
 
 @media (max-width: 600px) {
-  .button-greeting-div {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    margin-top: 24px;
-  }
-  .button-greeting-div .main-button,
-  .button-greeting-div .download-link-button {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: 0;
-    box-sizing: border-box;
-  }
+  .greeting-text, .greeting-role { text-align: center; }
+  .greet-main { padding: 32px 0 28px; }
+  .portfolio-site .greeting-text-p { font-size: 15px; line-height: 1.7; }
+  .greeting-text-div .social-media-div { justify-content: center; }
+  .button-greeting-div { flex-direction: column; gap: 12px; }
+  .button-greeting-div .main-button { width: 100%; box-sizing: border-box; }
+  .greeting-image-div { width: min(100%, 220px); }
 }

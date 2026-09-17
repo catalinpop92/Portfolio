@@ -12,6 +12,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.github}
           className="icon-button github"
+          aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,6 +25,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.linkedin}
           className="icon-button linkedin"
+          aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,6 +38,7 @@ export default function socialMedia() {
         <a
           href={`mailto:${socialMediaLinks.gmail}`}
           className="icon-button google"
+          aria-label="Email"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -48,6 +51,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.gitlab}
           className="icon-button gitlab"
+          aria-label="GitLab"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -60,6 +64,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.facebook}
           className="icon-button facebook"
+          aria-label="Facebook"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -72,6 +77,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.instagram}
           className="icon-button instagram"
+          aria-label="Instagram"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,6 +90,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.twitter}
           className="icon-button twitter"
+          aria-label="Twitter"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -96,6 +103,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.medium}
           className="icon-button medium"
+          aria-label="Medium"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -108,6 +116,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.stackoverflow}
           className="icon-button stack-overflow"
+          aria-label="Stack Overflow"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -120,6 +129,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.kaggle}
           className="icon-button kaggle"
+          aria-label="Kaggle"
           target="_blank"
           rel="noopener noreferrer"
         >

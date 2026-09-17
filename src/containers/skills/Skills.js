@@ -1,66 +1,60 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
-import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/codingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import StyleContext from "../../contexts/StyleContext";
+import {skillsSection} from "../../portfolio";
 import {useTranslation} from "react-i18next";
+import SectionReveal from "../../components/sectionReveal/SectionReveal";
 
 export default function Skills() {
-  const {isDark} = useContext(StyleContext);
   const {t} = useTranslation();
-  if (!skillsSection.display) {
-    return null;
-  }
+  if (!skillsSection.display) return null;
+
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
-      <div className="skills-main-div">
-        <Fade left duration={1000}>
-          <div className="skills-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
-            ) : (
-              <img
-                alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
-              ></img>
-            )}
-          </div>
-        </Fade>
-        <Fade right duration={1000}>
-          <div className="skills-text-div">
-            <h1
-              className={isDark ? "dark-mode skills-heading" : "skills-heading"}
-            >
-              {t("skills.title")} {" "}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text-subtitle"
-                  : "subTitle skills-text-subtitle"
-              }
-            >
-              {t("skills.subtitle")}
-            </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skill, i) => (
-                <p
-                  key={i}
-                  className={
-                    isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
-                  }
-                >
-                  {t(skill)}
-                </p>
-              ))}
+    <section
+      className="main soc-skills"
+      id="skills"
+      aria-labelledby="skills-title"
+    >
+      <SectionReveal direction="left">
+        <h2 className="skills-heading" id="skills-title">
+          {t(skillsSection.title)}
+        </h2>
+      </SectionReveal>
+      <SectionReveal direction="right" delay={100}>
+        <p className="subTitle soc-intro">{t(skillsSection.subTitle)}</p>
+      </SectionReveal>
+      <div className="soc-areas">
+        {skillsSection.areas.map((area, index) => (
+          <SectionReveal
+            key={area.id}
+            direction={["left", "bottom", "right"][index % 3]}
+            delay={(index % 3) * 120}
+          >
+            <div className="soc-area-reveal">
+              <article className="soc-area">
+                <i className={area.icon} aria-hidden="true" />
+                <h3>{t(`skills.area.${area.id}.title`)}</h3>
+                <p>{t(`skills.area.${area.id}.desc`)}</p>
+              </article>
             </div>
-          </div>
-        </Fade>
+          </SectionReveal>
+        ))}
       </div>
-    </div>
+      <SectionReveal direction="left">
+        <div className="soc-additional">
+          <h3>{t("skills.additional.title")}</h3>
+          <p>{t("skills.additional.desc")}</p>
+        </div>
+      </SectionReveal>
+      <div className="soc-toolbox">
+        <SectionReveal direction="left">
+          <h3>{t("skills.tools.title")}</h3>
+        </SectionReveal>
+        <SoftwareSkill />
+        <SectionReveal direction="right">
+          <p className="subTitle soc-background">{t("skills.background")}</p>
+        </SectionReveal>
+      </div>
+    </section>
   );
 }

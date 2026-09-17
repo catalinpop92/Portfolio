@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import {workExperiences} from "../../portfolio";
-import {Fade} from "react-reveal";
+import SectionReveal from "../../components/sectionReveal/SectionReveal";
 import StyleContext from "../../contexts/StyleContext";
 import {useTranslation} from "react-i18next";
 
@@ -12,31 +12,40 @@ export default function WorkExperience() {
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <Fade bottom duration={1000} distance="20px">
-          <div className="experience-container" id="workExperience">
-            <div>
-              <h1 className="experience-heading">{t('work.title')}</h1>
-              <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
-                  return (
-                    <ExperienceCard
-                      key={i}
-                      isDark={isDark}
-                      cardInfo={{
-                        company: card.company,
-                        desc: card.desc,
-                        date: card.date,
-                        companylogo: card.companylogo,
-                        role: card.role,
-                        descBullets: card.descBullets
-                      }}
-                    />
-                  );
-                })}
-              </div>
+        <div className="experience-container" id="workExperience">
+          <div>
+            <SectionReveal direction="left">
+              <h2 className="experience-heading">{t("work.title")}</h2>
+            </SectionReveal>
+            <div className="experience-cards-div">
+              {workExperiences.experience.map((card, i) => {
+                return (
+                  <SectionReveal
+                    key={card.role}
+                    direction={i % 2 ? "right" : "left"}
+                    delay={i * 150}
+                  >
+                    <div className="experience-reveal">
+                      <ExperienceCard
+                        isDark={isDark}
+                        cardInfo={{
+                          company: card.company,
+                          bannerTitle: card.bannerTitle,
+                          bannerImage: card.bannerImage,
+                          desc: card.desc,
+                          date: card.date,
+                          companylogo: card.companylogo,
+                          role: card.role,
+                          descBullets: card.descBullets
+                        }}
+                      />
+                    </div>
+                  </SectionReveal>
+                );
+              })}
             </div>
           </div>
-        </Fade>
+        </div>
       </div>
     );
   }

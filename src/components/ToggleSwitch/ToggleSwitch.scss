@@ -8,8 +8,11 @@
 }
 
 /* Fix visible slider checkbox */
-input {
-  transform: scale(0.5);
+.switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .slider {
