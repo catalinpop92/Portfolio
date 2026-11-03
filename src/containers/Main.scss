@@ -295,8 +295,11 @@
     .education-text-bullets li { text-align: center; }
     .education-text-bullets li + li { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
     .education-card-border { display: none; }
-    .experience-text-details { padding: 20px; }
-    .experience-text-details ul { padding-left: 20px; }
+    .experience-text-details { padding: 20px; text-align: center; }
+    .experience-text-role, .experience-text-date, .experience-text-desc,
+    .experience-text-details li { text-align: center; }
+    .experience-text-details ul { padding: 0; list-style: none; }
+    .experience-text-details li + li { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
     .portfolio-details > summary,
     .soc-skills .soc-details > summary,
     .forensics .forensics-submit {
