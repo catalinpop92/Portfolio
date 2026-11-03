@@ -254,12 +254,46 @@
     .header .menu-icon { padding: 12px; }
     .header .menu { width: 100%; }
     .skills-heading, .education-heading, .experience-heading, .contact-title { margin-bottom: 20px; }
-    .education-card { flex-direction: column; gap: 12px; }
-    .education-card-container { gap: 24px; }
-    .education-roundedimg { width: 56px; height: 56px; }
-    .education-text-school { font-size: 20px; }
-    .education-text-desc, .education-text-bullets { text-align: left; }
-    .education-text-bullets ul { max-width: none; margin: 12px 0 0; }
+    .education-card {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 28px 20px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .education-card-container { gap: 20px; }
+    .education-card-right { width: 100%; }
+    .education-roundedimg {
+      display: block;
+      width: 72px;
+      height: 72px;
+      box-sizing: border-box;
+      padding: 8px;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+    .education-text-school { font-size: 21px; text-wrap: balance; }
+    .education-text-subHeader { padding-top: 10px; line-height: 1.5; text-wrap: balance; }
+    .education-text-duration {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+    }
+    .education-text-desc, .education-text-bullets { text-align: center; }
+    .education-text-desc { margin-top: 16px; }
+    .education-text-bullets { margin-top: 24px; }
+    .education-text-bullets ul { max-width: none; margin: 16px 0 0; padding: 0; list-style: none; }
+    .education-text-bullets li { text-align: center; }
+    .education-text-bullets li + li { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .education-card-border { display: none; }
     .experience-text-details { padding: 20px; }
     .experience-text-details ul { padding-left: 20px; }
     .portfolio-details > summary,
