@@ -8,7 +8,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // set false to disable splash screen
   animation: splashAnimation,
   duration: 1500 // Set animation duration as per your animation
 };
@@ -24,7 +24,7 @@ const greeting = {
   title: "greeting.title",
   subTitle: "greeting.subtitle",
   resumeLink:
-    "https://drive.google.com/uc?export=download&id=1d5QG-L2EmTSvh81hhNDtgHQY_-dndln2",
+    "https://drive.google.com/uc?export=download&id=1FPKQDp6Yd2yXot_6xp671BX2E_Ykaj9d",
   displayGreeting: true
 };
 
@@ -58,7 +58,7 @@ const skillsSection = {
   toolGroups: [
     {
       title: "skills.tools.operations",
-      tools: ["IBM QRadar", "Cynet EDR", "Microsoft Defender", "MISP", "F5 ASM/WAF", "Radware AppWall", "FortiGate", "Forcepoint / Check Point Proxy", "Cisco Umbrella", "PSIM"]
+      tools: ["IBM QRadar", "Cynet EDR", "Microsoft Defender", "MISP", "F5 ASM/WAF", "Radware AppWall", "FortiGate", "Check Point Firewall", "Forcepoint / Check Point Proxy", "Cisco Umbrella", "PSIM"]
     },
     {
       title: "skills.tools.training",
@@ -151,7 +151,9 @@ const workExperiences = {
         "work.soc.bullet.1",
         "work.soc.bullet.2",
         "work.soc.bullet.3",
-        "work.soc.bullet.4"
+        "work.soc.bullet.4",
+        "work.soc.bullet.5",
+        "work.soc.bullet.6"
       ]
     },
     {

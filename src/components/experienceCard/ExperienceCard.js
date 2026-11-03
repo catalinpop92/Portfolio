@@ -110,9 +110,16 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {t(cardInfo.desc)}
         </p>
+        <details className="portfolio-details">
+          <summary>
+            <span className="details-open-label">{t("details.experience")}</span>
+            <span className="details-close-label">{t("details.closeExperience")}</span>
+            <span className="details-context"> — {t(cardInfo.company)}</span>
+          </summary>
         <ul>
           <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
         </ul>
+        </details>
       </div>
     </div>
   );

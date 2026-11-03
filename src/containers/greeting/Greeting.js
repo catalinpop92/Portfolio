@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {Fade} from "react-reveal";
 import "./Greeting.scss";
-import SecurityVisual from "../../components/securityVisual/SecurityVisual";
+import portrait from "../../assets/images/catalin-pop-portrait.png";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {greeting} from "../../portfolio";
@@ -20,11 +20,12 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
+              <p className="greeting-eyebrow"><span aria-hidden="true">●</span> {t("greeting.eyebrow")}</p>
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
-                {" "}
-                {t(greeting.title || "greeting.title")}{" "}
+                <span className="greeting-hello">{t("greeting.hello")}</span>
+                <span className="greeting-name">{greeting.username}</span>
               </h1>
               <h2 className="greeting-role">{t("greeting.role")}</h2>
               {t(greeting.subTitle || "greeting.subtitle")
@@ -44,7 +45,8 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text={t("greeting.contact")} href="#contact" />
+                <Button text={t("greeting.viewProjects")} href="#projects" />
+                <Button text={t("greeting.contact")} href="#contact" className="contact-link-button" />
                 {greeting.resumeLink && (
                   <Button
                     text={t("greeting.downloadResume")}
@@ -54,10 +56,22 @@ export default function Greeting() {
                   />
                 )}
               </div>
+              <a className="greeting-challenge-link" href="#challenge">
+                <span className="greeting-challenge-icon" aria-hidden="true">↗</span>
+                <span><strong>{t("greeting.challengeTitle")}</strong><small>{t("greeting.challengeSubtitle")}</small></span>
+              </a>
             </div>
           </div>
           <div className="greeting-image-div">
-            <SecurityVisual />
+            <div className="greeting-portrait-frame">
+            <img
+              className="greeting-portrait"
+              src={portrait}
+              alt={greeting.username}
+              width="1086"
+              height="1448"
+            />
+            </div>
           </div>
         </div>
       </div>

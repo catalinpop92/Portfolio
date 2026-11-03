@@ -1,9 +1,51 @@
 .portfolio-site .soc-skills {
   .soc-intro {
-    max-width: 760px;
-    margin: 0 0 28px;
+    max-width: 100%;
+    margin: 0 0 12px;
     font-size: 17px;
   }
+  .soc-overview { margin: 0 0 20px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+  .soc-details > summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 48px;
+    margin-bottom: 0;
+    padding: 10px 12px 10px 16px;
+    list-style: none;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+  .soc-details > summary::-webkit-details-marker { display: none; }
+  .soc-details > summary::marker { content: ""; }
+  .soc-details > summary::after {
+    content: "+";
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .soc-details > summary:hover,
+  .soc-details[open] > summary { border-color: var(--accent); background: var(--accent-soft); }
+  .soc-details[open] > summary { margin-bottom: 24px; }
+  .soc-details[open] > summary::after { content: "−"; }
+  .soc-details-close-label,
+  .soc-details[open] .soc-details-open-label { display: none; }
+  .soc-details[open] .soc-details-close-label { display: inline; }
   .soc-areas {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -56,7 +98,9 @@
     margin: 0 0 24px;
   }
   .soc-background {
-    margin: 24px 0 0;
+    margin: 20px 0 0;
+    padding: 4px 0 4px 16px;
+    border-left: 2px solid var(--accent);
     font-size: 15px;
     line-height: 1.75;
   }

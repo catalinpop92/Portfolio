@@ -8,36 +8,55 @@
 
 .greet-main {
   width: 90%;
-  padding: 56px 0 40px;
+  padding: clamp(44px, 7vw, 88px) 0 64px;
   margin: 0 auto;
 }
 
 .greeting-main {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 56px;
+  gap: clamp(40px, 6vw, 88px);
   align-items: center;
 }
 
+.greeting-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 24px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--surface);
+  color: var(--muted);
+  font: 600 11px/1.4 Consolas, "Courier New", monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.greeting-eyebrow > span { color: var(--accent); font-size: 10px; }
+
 .greeting-text {
-  font-size: clamp(30px, 3.5vw, 46px);
-  line-height: 1.15;
-  letter-spacing: -0.04em;
+  font-size: clamp(42px, 5.2vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
   color: var(--ink);
   margin: 0 0 16px;
 }
+.greeting-hello { display: block; margin-bottom: 10px; color: var(--muted); font-size: clamp(19px, 2vw, 24px); font-weight: 400; letter-spacing: -0.02em; }
+.greeting-name { display: block; text-wrap: balance; }
 
 .greeting-role {
   color: var(--accent);
-  font-size: clamp(16px, 1.5vw, 20px);
+  font-size: clamp(16px, 1.5vw, 19px);
   line-height: 1.5;
   font-family: Consolas, "Courier New", monospace;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .portfolio-site .greeting-text-p {
-  font-size: 16px;
+  max-width: 570px;
+  font-size: 17px;
   line-height: 1.75;
   margin: 0 0 16px;
 }
@@ -49,32 +68,52 @@
 .button-greeting-div {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 24px;
 }
+.greeting-challenge-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 28px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.greeting-challenge-link strong, .greeting-challenge-link small { display: block; }
+.greeting-challenge-link strong { font-size: 13px; line-height: 1.5; }
+.greeting-challenge-link small { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.greeting-challenge-icon { display: grid; flex: none; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 20px; transition: transform 180ms ease, border-color 180ms ease; }
+.greeting-challenge-link:hover .greeting-challenge-icon { transform: translate(2px, -2px); border-color: var(--accent); }
+
+.greeting-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  background: var(--surface);
+}
+.greeting-portrait-frame::before { content: ""; position: absolute; inset: -14px 24px 24px -14px; border: 1px solid var(--line); border-radius: 28px; z-index: -1; }
 .button-greeting-div .main-button {
   margin: 0;
   padding: 14px 20px;
   font-size: 14px;
 }
 
-.security-visual {
+.greeting-portrait {
+  display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: none;
+  height: auto;
   margin: 0 auto;
-  color: var(--accent);
   box-sizing: border-box;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background-color: var(--surface);
-  background-image:
-    radial-gradient(ellipse at center, var(--accent-soft), transparent 70%),
-    linear-gradient(var(--accent-soft) 1px, transparent 1px),
-    linear-gradient(90deg, var(--accent-soft) 1px, transparent 1px);
-  background-size: 100% 100%, 32px 32px, 32px 32px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
 }
-.security-visual svg { width: 100%; height: auto; display: block; }
 
 @media (max-width: 900px) {
   .greeting-main { grid-template-columns: 1fr; gap: 28px; }
@@ -91,4 +130,8 @@
   .button-greeting-div { flex-direction: column; gap: 12px; }
   .button-greeting-div .main-button { width: 100%; box-sizing: border-box; }
   .greeting-image-div { width: min(100%, 220px); }
+  .greeting-eyebrow { margin-bottom: 20px; }
+  .greeting-text-div > div { text-align: center; }
+  .greeting-challenge-link { margin-left: auto; margin-right: auto; text-align: left; }
+  .greeting-portrait-frame::before { inset: -8px 16px 16px -8px; }
 }

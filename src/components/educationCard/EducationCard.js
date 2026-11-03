@@ -59,11 +59,16 @@ export default function EducationCard({school}) {
                 {school.duration}
               </p>
               <p className="education-text-desc">{t(school.desc)}</p>
-              <div className="education-text-bullets">
+              <details className="portfolio-details education-text-bullets">
+                <summary>
+                  <span className="details-open-label">{t("details.education")}</span>
+                  <span className="details-close-label">{t("details.closeEducation")}</span>
+                  <span className="details-context"> — {t(school.schoolName)}</span>
+                </summary>
                 <ul>
                   <GetDescBullets descBullets={school.descBullets} />
                 </ul>
-              </div>
+              </details>
             </div>
           </div>
         </div>

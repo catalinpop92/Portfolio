@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
+import ForensicsChallenge from "../components/forensicsChallenge/ForensicsChallenge";
 import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
@@ -33,7 +34,7 @@ const Main = () => {
 
   useEffect(() => {
     document.documentElement.lang = i18n.resolvedLanguage || "en";
-    document.title = "Catalin Pop | SOC Analyst & Cyber Security";
+    document.title = "Catalin Pop | SOC Analyst";
   }, [i18n.resolvedLanguage]);
 
   useEffect(() => {
@@ -73,11 +74,12 @@ const Main = () => {
             <main id="main-content" tabIndex="-1">
               <Greeting />
               <Skills />
-              <StackProgress />
-              <Education />
               <WorkExperience />
               <Projects />
               <StartupProject />
+              <ForensicsChallenge />
+              <Education />
+              <StackProgress />
               <Achievement />
               <Blogs />
               <Talks />

@@ -103,11 +103,13 @@
     line-height: 1.4;
   }
   .lab-description {
-    margin: 14px 0 20px;
+    margin: 14px 0 12px;
     color: var(--muted);
     font-size: 15px;
     line-height: 1.75;
   }
+  .lab-contribution { margin: 0 0 20px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+  .lab-contribution strong { color: var(--ink); }
   .lab-tools {
     display: flex;
     flex-wrap: wrap;

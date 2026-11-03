@@ -23,6 +23,12 @@ export default function Skills() {
       <SectionReveal direction="right" delay={100}>
         <p className="subTitle soc-intro">{t(skillsSection.subTitle)}</p>
       </SectionReveal>
+      <p className="soc-overview">{t("skills.overview")}</p>
+      <details className="soc-details">
+        <summary>
+          <span className="soc-details-open-label">{t("skills.more")}</span>
+          <span className="soc-details-close-label">{t("skills.less")}</span>
+        </summary>
       <div className="soc-areas">
         {skillsSection.areas.map((area, index) => (
           <SectionReveal
@@ -55,6 +61,7 @@ export default function Skills() {
           <p className="subTitle soc-background">{t("skills.background")}</p>
         </SectionReveal>
       </div>
+      </details>
     </section>
   );
 }

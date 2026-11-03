@@ -5,13 +5,13 @@
 }
 
 .portfolio-site {
-  --page-bg: #f1f7fa;
+  --page-bg: #f4f8f9;
   --surface: #ffffff;
   --ink: #102b3c;
   --muted: #526575;
-  --accent: #087e8b;
-  --line: #cbdce5;
-  --accent-soft: rgba(8, 126, 139, 0.08);
+  --accent: #06727d;
+  --line: #cedee2;
+  --accent-soft: rgba(6, 114, 125, 0.08);
   background: var(--page-bg);
   color: var(--ink);
   min-height: 100vh;
@@ -19,12 +19,12 @@
   line-height: 1.65;
 
   &.dark-mode {
-    --page-bg: #09131f;
-    --surface: #101f30;
-    --ink: #e6f0f6;
-    --muted: #a8bdcd;
-    --accent: #67e8f9;
-    --line: #2b4256;
+    --page-bg: #08121c;
+    --surface: #101f2c;
+    --ink: #eaf2f4;
+    --muted: #adc0c8;
+    --accent: #7ce6db;
+    --line: #2a414b;
     --accent-soft: rgba(34, 211, 238, 0.08);
     color-scheme: dark;
   }
@@ -37,15 +37,20 @@
   }
 
   .main, .education-section, .experience-container {
-    padding: 40px 0;
+    padding: clamp(48px, 6vw, 72px) 0;
+  }
+
+  .soc-skills, .experience-container, #projects, .forensics, .education-section, .contact-margin-top {
+    border-top: 1px solid var(--line);
   }
 
   .skills-heading, .education-heading, .experience-heading, .contact-title {
-    font-size: clamp(28px, 3vw, 38px);
+    font-size: clamp(30px, 3.4vw, 42px);
     line-height: 1.25;
     letter-spacing: -0.025em;
     margin: 0 0 24px;
   }
+  .skills-heading, .education-heading, .experience-heading, .contact-title { color: var(--ink); font-weight: 600; }
 
   .education-section > * { flex: initial; margin-bottom: 0; }
   .education-section .education-heading { margin-bottom: 28px; }
@@ -66,8 +71,62 @@
   .experience-reveal { display: flex; min-width: 0; }
   .experience-reveal > div { flex: 1; min-width: 0; }
   .experience-text-details { padding: 28px; }
+  .experience-text-role, .experience-text-date, .experience-text-desc { text-align: left; }
+  .experience-text-date { font-family: Consolas, "Courier New", monospace; font-size: 13px; color: var(--accent); font-weight: 400; }
   .experience-text-desc, .experience-text-details li { font-size: 16px; line-height: 1.7; }
   .experience-text-details li + li { margin-top: 6px; }
+  .portfolio-details > summary, .soc-details > summary {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    line-height: 1.6;
+  }
+  .portfolio-details > summary:focus-visible, .soc-details > summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+  .portfolio-details > summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 48px;
+    padding: 10px 12px 10px 16px;
+    list-style: none;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--ink);
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+  .portfolio-details > summary::-webkit-details-marker { display: none; }
+  .portfolio-details > summary::marker { content: ""; }
+  .portfolio-details > summary::after {
+    content: "+";
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .portfolio-details > summary:hover,
+  .portfolio-details[open] > summary { border-color: var(--accent); background: var(--accent-soft); }
+  .portfolio-details[open] > summary::after { content: "−"; }
+  .details-close-label,
+  .portfolio-details[open] .details-open-label { display: none; }
+  .portfolio-details[open] .details-close-label { display: inline; }
+  .details-context { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .portfolio-details ul { margin: 12px 0 0; }
 
   .projects-container { gap: 24px; margin-top: 28px; }
   .project-card { padding: 24px; justify-content: flex-start; }
@@ -78,6 +137,7 @@
   .card-subtitle { line-height: 1.65; margin: 12px 0 20px; }
   .project-card-footer { margin-top: auto; }
   .contact-div-main { align-items: center; gap: 48px; }
+  .contact-div-main { padding: clamp(24px, 4vw, 44px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
   .contact-header { min-width: 0; }
   .contact-subtitle { line-height: 1.7; }
   .contact-image-div { max-width: 340px; }
@@ -95,6 +155,7 @@
     border-bottom: 1px solid var(--line);
     padding: 14px max(calc((100% - 1120px) / 2), 32px);
   }
+  .header { box-shadow: 0 8px 30px rgba(0, 0, 0, .035); }
 
   .header .logo {
     color: var(--ink);
@@ -119,12 +180,13 @@
     background: var(--accent-soft) !important;
     color: var(--accent) !important;
   }
+  .header li a[href="#challenge"] { color: var(--accent) !important; }
 
   .main-button {
     background: var(--accent);
     color: var(--page-bg);
     border-color: var(--accent);
-    border-radius: 8px;
+    border-radius: 10px;
     text-transform: none;
     letter-spacing: 0.01em;
     transition: transform 160ms ease, box-shadow 160ms ease;
@@ -139,12 +201,14 @@
     background: transparent;
     color: var(--accent);
   }
+  .contact-link-button .main-button { background: var(--surface); color: var(--ink); border-color: var(--line); }
+  .contact-link-button .main-button:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
   .download-link-button .main-button:hover { background: var(--accent-soft); }
 
   .project-card, .experience-card, .experience-card-dark {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 16px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
     transition: border-color 180ms ease, transform 180ms ease;
   }
@@ -181,6 +245,7 @@
   .portfolio-site {
     .main, .greet-main, .education-section, .experience-container { width: calc(100% - 40px); }
     .main, .education-section, .experience-container { padding: 28px 0; }
+    .main, .education-section, .experience-container { padding-top: 44px; padding-bottom: 44px; }
     .header { padding: 12px 20px; }
     .header .logo { font-size: 14px; margin-top: 0; }
     .header .menu-icon { padding: 12px; }

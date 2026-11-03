@@ -96,6 +96,7 @@ export default function BuildweekProjects() {
                       <p className="lab-description">
                         {t(project.description)}
                       </p>
+                      <p className="lab-contribution"><strong>{t("buildweeks.contribution")}:</strong> {t(`buildweeks.buildweek-${project.unit}.contribution`)}</p>
                       <ul
                         className="lab-tools"
                         aria-label={t("skills.tools.title")}
