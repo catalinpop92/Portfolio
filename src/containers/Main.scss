@@ -259,6 +259,15 @@
     .education-text-bullets ul { max-width: none; margin: 12px 0 0; }
     .experience-text-details { padding: 20px; }
     .experience-text-details ul { padding-left: 20px; }
+    .portfolio-details > summary,
+    .soc-skills .soc-details > summary,
+    .forensics .forensics-submit {
+      display: flex;
+      width: fit-content;
+      max-width: 100%;
+      margin-inline: auto;
+      text-align: center;
+    }
     .project-card { padding: 20px; }
     .project-image { height: 160px; }
     .contact-subtitle { text-transform: none; }
