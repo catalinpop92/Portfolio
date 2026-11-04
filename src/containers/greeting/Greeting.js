@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {Fade} from "react-reveal";
 import "./Greeting.scss";
-import portrait from "../../assets/images/catalin-pop-portrait.png";
+import portrait from "../../assets/images/catalin-pop-portrait-v2.png";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {greeting} from "../../portfolio";
