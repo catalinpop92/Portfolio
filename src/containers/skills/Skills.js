@@ -28,6 +28,10 @@ export default function Skills() {
         <summary>
           <span className="soc-details-open-label">{t("skills.more")}</span>
           <span className="soc-details-close-label">{t("skills.less")}</span>
+          <svg className="soc-details-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+            <path d="M4 10h12" />
+            <path className="soc-details-icon-vertical" d="M10 4v12" />
+          </svg>
         </summary>
       <div className="soc-areas">
         {skillsSection.areas.map((area, index) => (

@@ -9,12 +9,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 14px;
     box-sizing: border-box;
     max-width: 100%;
     min-height: 48px;
     margin-bottom: 0;
-    padding: 10px 12px 10px 16px;
+    padding: 12px 16px;
+    line-height: 1.5;
     list-style: none;
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -25,24 +26,21 @@
   }
   .soc-details > summary::-webkit-details-marker { display: none; }
   .soc-details > summary::marker { content: ""; }
-  .soc-details > summary::after {
-    content: "+";
-    display: grid;
+  .soc-details-icon {
+    display: block;
     flex: none;
-    place-items: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
-    background: var(--accent-soft);
+    width: 20px;
+    height: 20px;
     color: var(--accent);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
   }
   .soc-details > summary:hover,
   .soc-details[open] > summary { border-color: var(--accent); background: var(--accent-soft); }
   .soc-details[open] > summary { margin-bottom: 24px; }
-  .soc-details[open] > summary::after { content: "−"; }
+  .soc-details[open] .soc-details-icon-vertical { display: none; }
   .soc-details-close-label,
   .soc-details[open] .soc-details-open-label { display: none; }
   .soc-details[open] .soc-details-close-label { display: inline; }
