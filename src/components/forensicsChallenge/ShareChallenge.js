@@ -7,7 +7,7 @@ export default function ShareChallenge() {
   const [fallbackUrl, setFallbackUrl] = useState("");
 
   async function share() {
-    const url = new URL("#challenge", window.location.href).href;
+    const url = new URL("#/soc", window.location.href).href;
     setStatus("");
     setFallbackUrl("");
     if (typeof navigator.share === "function") {

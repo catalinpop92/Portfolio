@@ -4,7 +4,7 @@ import {execute, validateAnswers} from "./engine";
 import ShareChallenge from "./ShareChallenge";
 import "./ForensicsChallenge.scss";
 
-export default function ForensicsChallenge() {
+export default function ForensicsChallenge({standalone = false}) {
   const {t, i18n} = useTranslation();
   const [command, setCommand] = useState("");
   const [history, setHistory] = useState([]);
@@ -14,6 +14,7 @@ export default function ForensicsChallenge() {
   const [actions, setActions] = useState([]);
   const [feedback, setFeedback] = useState(null);
   const outputRef = useRef(null);
+  const Heading = standalone ? "h1" : "h2";
 
   useEffect(() => {
     if (outputRef.current) outputRef.current.scrollTop = outputRef.current.scrollHeight;
@@ -65,7 +66,7 @@ export default function ForensicsChallenge() {
     <section className="main forensics" id="challenge" aria-labelledby="challenge-title">
       <div className="forensics-intro">
         <p className="forensics-eyebrow">{t("challenge.eyebrow")}</p>
-        <h2 id="challenge-title">{t("challenge.title")}</h2>
+        <Heading id="challenge-title">{t("challenge.title")}</Heading>
         <p>{t("challenge.intro")}</p>
         <ShareChallenge />
       </div>

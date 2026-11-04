@@ -56,15 +56,13 @@ export default function Skills() {
           <p>{t("skills.additional.desc")}</p>
         </div>
       </SectionReveal>
-      <div className="soc-toolbox">
-        <SectionReveal direction="left">
-          <h3>{t("skills.tools.title")}</h3>
-        </SectionReveal>
+      <details className="soc-toolbox portfolio-details">
+        <summary>{t("skills.tools.title")}</summary>
         <SoftwareSkill />
         <SectionReveal direction="right">
           <p className="subTitle soc-background">{t("skills.background")}</p>
         </SectionReveal>
-      </div>
+      </details>
       </details>
     </section>
   );

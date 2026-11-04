@@ -45,7 +45,6 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text={t("greeting.viewProjects")} href="#projects" />
                 <Button text={t("greeting.contact")} href="#contact" className="contact-link-button" />
                 {greeting.resumeLink && (
                   <Button
@@ -56,10 +55,6 @@ export default function Greeting() {
                   />
                 )}
               </div>
-              <a className="greeting-challenge-link" href="#challenge">
-                <span className="greeting-challenge-icon" aria-hidden="true">↗</span>
-                <span><strong>{t("greeting.challengeTitle")}</strong><small>{t("greeting.challengeSubtitle")}</small></span>
-              </a>
             </div>
           </div>
           <div className="greeting-image-div">

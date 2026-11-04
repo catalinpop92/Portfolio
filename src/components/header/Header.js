@@ -25,10 +25,10 @@ export default function Header() {
   const menuButton = useRef(null);
   const links = [
     [skillsSection.display, "skills", "header.skills"],
+    [educationInfo.display, "education", "education.title"],
     [workExperiences.display, "experience", "header.experience"],
     [bigProjects.display, "projects", "header.projects"],
     [true, "challenge", "challenge.nav"],
-    [educationInfo.display, "education", "education.title"],
     [openSource.display, "opensource", "header.opensource"],
     [achievementSection.display, "achievements", "header.achievements"],
     [blogSection.display, "blogs", "header.blogs"],
@@ -73,7 +73,7 @@ export default function Header() {
               .filter(([display]) => display)
               .map(([, id, label]) => (
                 <li key={id}>
-                  <a href={"#" + id} onClick={() => setIsOpen(false)}>
+                  <a href={id === "challenge" ? "#/soc" : "#" + id} onClick={() => setIsOpen(false)}>
                     {t(label)}
                   </a>
                 </li>

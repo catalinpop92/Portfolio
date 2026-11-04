@@ -28,7 +28,7 @@ test("opens the device share sheet with a challenge link", async () => {
   const share = jest.fn().mockResolvedValue();
   Object.defineProperty(navigator, "share", {configurable: true, value: share});
   await act(async () => { Simulate.click(container.querySelector("button")); });
-  expect(share).toHaveBeenCalledWith(expect.objectContaining({url: expect.stringMatching(/#challenge$/)}));
+  expect(share).toHaveBeenCalledWith(expect.objectContaining({url: expect.stringMatching(/#\/soc$/)}));
 });
 
 test("falls back to a selectable link if sharing and clipboard are unavailable", async () => {
@@ -36,7 +36,7 @@ test("falls back to a selectable link if sharing and clipboard are unavailable",
   Object.defineProperty(navigator, "clipboard", {configurable: true, value: undefined});
   await act(async () => { Simulate.click(container.querySelector("button")); });
   expect(container.querySelector('[role="status"]').textContent).toContain("Seleziona e copia");
-  expect(container.querySelector("input").value).toMatch(/#challenge$/);
+  expect(container.querySelector("input").value).toMatch(/#\/soc$/);
 });
 
 test("copies the challenge link when the share sheet is unavailable", async () => {
@@ -44,6 +44,6 @@ test("copies the challenge link when the share sheet is unavailable", async () =
   Object.defineProperty(navigator, "share", {configurable: true, value: undefined});
   Object.defineProperty(navigator, "clipboard", {configurable: true, value: {writeText}});
   await act(async () => { Simulate.click(container.querySelector("button")); });
-  expect(writeText).toHaveBeenCalledWith(expect.stringMatching(/#challenge$/));
+  expect(writeText).toHaveBeenCalledWith(expect.stringMatching(/#\/soc$/));
   expect(container.querySelector('[role="status"]').textContent).toBe("Link copiato.");
 });

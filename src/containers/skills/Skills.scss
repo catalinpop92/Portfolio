@@ -91,10 +91,13 @@
   .soc-toolbox {
     margin-top: 36px;
   }
-  .soc-toolbox > h3 {
-    font-size: 24px;
-    margin: 0 0 24px;
+  .soc-toolbox > summary {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    font-size: 16px;
   }
+  .soc-toolbox[open] > summary { margin-bottom: 20px; }
   .soc-background {
     margin: 20px 0 0;
     padding: 4px 0 4px 16px;
@@ -131,9 +134,6 @@
     }
     .soc-intro {
       font-size: 16px;
-    }
-    .soc-toolbox > h3 {
-      font-size: 21px;
     }
   }
 }

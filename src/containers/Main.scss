@@ -52,22 +52,30 @@
   }
   .skills-heading, .education-heading, .experience-heading, .contact-title { color: var(--ink); font-weight: 600; }
 
+  .education-section {
+    --education-divider-space: 32px;
+    padding-block: var(--education-divider-space);
+  }
   .education-section > * { flex: initial; margin-bottom: 0; }
-  .education-section .education-heading { margin-bottom: 28px; }
-  .education-card-container { padding: 0; gap: 28px; }
+  .education-section .education-heading { margin-bottom: 24px; }
+  .education-card-container { padding: 0; gap: 0; }
+  .education-entry { padding-block: var(--education-divider-space); }
+  .education-entry + .education-entry { border-top: 1px solid var(--line); }
+  .education-entry:first-child { padding-top: 0; }
+  .education-entry:last-child { padding-bottom: 0; }
   .education-card { flex-direction: row; gap: 24px; padding: 0; }
   .education-card-left { flex-shrink: 0; }
   .education-roundedimg { width: 64px; height: 64px; margin: 0; }
-  .education-card-right { max-width: none; min-width: 0; }
+  .education-card-right { display: grid; gap: 12px; flex: 1; max-width: none; min-width: 0; }
+  .education-text-details { display: grid; gap: 12px; }
+  .education-text-subHeader, .education-text-duration { margin: 0; padding: 0; line-height: 1.5; }
   .education-text-school { font-size: 22px; }
   .education-text-desc, .education-text-bullets { font-size: 16px; line-height: 1.7; }
-  .education-text-desc { margin: 12px 0 0; }
-  .education-text-bullets { margin-top: 20px; }
-  .education-text-bullets[open] > summary { margin-bottom: 16px; }
+  .education-text-desc { margin: 0; }
+  .education-text-bullets { margin-top: 8px; }
+  .education-text-bullets[open] > summary { margin-bottom: 0; }
   .education-text-bullets ul { padding-left: 20px; }
   .education-text-bullets li + li { margin-top: 6px; }
-  .education-card-border { width: 100%; height: 0; margin: 24px 0 0; border-top-width: 1px; }
-  .education-card-container > :last-child .education-card-border { display: none; }
 
   .experience-container > * { min-width: 0; }
   .experience-cards-div { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 24px; }
@@ -250,6 +258,7 @@
     .main, .greet-main, .education-section, .experience-container { width: calc(100% - 40px); }
     .main, .education-section, .experience-container { padding: 28px 0; }
     .main, .education-section, .experience-container { padding-top: 44px; padding-bottom: 44px; }
+    .education-section { --education-divider-space: 24px; padding-block: var(--education-divider-space); }
     .header { padding: 12px 20px; }
     .header .logo { font-size: 14px; margin-top: 0; }
     .header .menu-icon { padding: 12px; }
@@ -265,7 +274,7 @@
       border-radius: 16px;
       text-align: center;
     }
-    .education-card-container { gap: 20px; }
+    .education-card-container { gap: 0; }
     .education-card-right { width: 100%; }
     .education-roundedimg {
       display: block;
@@ -278,10 +287,10 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
     .education-text-school { font-size: 21px; text-wrap: balance; }
-    .education-text-subHeader { padding-top: 10px; line-height: 1.5; text-wrap: balance; }
+    .education-text-subHeader { text-wrap: balance; }
     .education-text-duration {
       display: inline-block;
-      margin-top: 12px;
+      justify-self: center;
       padding: 4px 12px;
       border-radius: 20px;
       background: var(--accent-soft);
@@ -289,12 +298,10 @@
       font-size: 13px;
     }
     .education-text-desc, .education-text-bullets { text-align: center; }
-    .education-text-desc { margin-top: 16px; }
-    .education-text-bullets { margin-top: 24px; }
+    .education-text-bullets { margin-top: 8px; }
     .education-text-bullets ul { max-width: none; margin: 16px 0 0; padding: 0; list-style: none; }
     .education-text-bullets li { text-align: center; }
     .education-text-bullets li + li { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
-    .education-card-border { display: none; }
     .experience-text-details { padding: 20px; text-align: center; }
     .experience-text-role, .experience-text-date, .experience-text-desc,
     .experience-text-details li { text-align: center; }

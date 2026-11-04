@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
-import ForensicsChallenge from "../components/forensicsChallenge/ForensicsChallenge";
+import SocPage, {SocPreview} from "./soc/SocPage";
 import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
@@ -28,21 +28,30 @@ const Main = () => {
   const [isDark, setIsDark] = useLocalStorage("isDark", true);
   const reducedMotion = useReducedMotion();
   const {i18n, t} = useTranslation();
+  const [isSocPage, setIsSocPage] = useState(() => window.location.hash === "#/soc");
+
+  useEffect(() => {
+    const navigate = () => setIsSocPage(window.location.hash === "#/soc");
+    window.addEventListener("hashchange", navigate);
+    return () => window.removeEventListener("hashchange", navigate);
+  }, []);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] = useState(
     () => splashScreen.enabled && !reducedMotion
   );
 
   useEffect(() => {
     document.documentElement.lang = i18n.resolvedLanguage || "en";
-    document.title = "Catalin Pop | SOC Analyst";
-  }, [i18n.resolvedLanguage]);
+    document.title = isSocPage ? `${t("challenge.title")} | Catalin Pop` : "Catalin Pop | SOC Analyst";
+  }, [i18n.resolvedLanguage, isSocPage, t]);
 
   useEffect(() => {
-    if (!isShowingSplashAnimation && window.location.hash) {
+    if (isSocPage) {
+      window.scrollTo(0, 0);
+    } else if (!isShowingSplashAnimation && window.location.hash) {
       const target = document.getElementById(window.location.hash.slice(1));
       if (target) target.scrollIntoView({behavior: "instant"});
     }
-  }, [isShowingSplashAnimation]);
+  }, [isShowingSplashAnimation, isSocPage]);
 
   useEffect(() => {
     if (isShowingSplashAnimation) {
@@ -72,13 +81,14 @@ const Main = () => {
             </a>
             <Header />
             <main id="main-content" tabIndex="-1">
+              {isSocPage ? <SocPage /> : <>
               <Greeting />
               <Skills />
+              <Education />
               <WorkExperience />
               <Projects />
               <StartupProject />
-              <ForensicsChallenge />
-              <Education />
+              <SocPreview />
               <StackProgress />
               <Achievement />
               <Blogs />
@@ -86,6 +96,7 @@ const Main = () => {
               <Twitter />
               <Podcast />
               <Profile />
+              </>}
             </main>
             <Footer />
             <ScrollToTopButton />

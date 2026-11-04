@@ -90,7 +90,10 @@ const educationInfo = {
         "edu.card.0.descBullets.2",
         "edu.card.0.descBullets.3",
         "edu.card.0.descBullets.4",
-        "edu.card.0.descBullets.5"
+        "edu.card.0.descBullets.5",
+        "edu.card.0.descBullets.6",
+        "edu.card.0.descBullets.7",
+        "edu.card.0.descBullets.8"
       ]
     },
     {
@@ -105,7 +108,11 @@ const educationInfo = {
         "edu.card.1.descBullets.2",
         "edu.card.1.descBullets.3",
         "edu.card.1.descBullets.4",
-        "edu.card.1.descBullets.5"
+        "edu.card.1.descBullets.5",
+        "edu.card.1.descBullets.6",
+        "edu.card.1.descBullets.7",
+        "edu.card.1.descBullets.8",
+        "edu.card.1.descBullets.9"
       ]
     }
   ]
