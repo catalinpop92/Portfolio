@@ -77,6 +77,19 @@
   transform: rotate(-45deg);
 }
 @media (max-width: 1100px) {
+  .site-header--open .headroom {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(0) !important;
+  }
+  .site-header--open .header {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
   .header {
     flex-wrap: wrap;
     gap: 0;

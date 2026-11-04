@@ -3,11 +3,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: var(--content-gap);
     border-top: 1px solid var(--line);
   }
   .soc-preview h2 {
-    margin: 0 0 16px;
+    margin: 0 0 var(--content-gap);
     color: var(--ink);
     font-size: clamp(28px, 3vw, 38px);
     line-height: 1.25;
@@ -39,8 +39,8 @@
   }
   .soc-page-link span { color: var(--accent); }
   .soc-page-link:hover { border-color: var(--accent); background: var(--accent-soft); }
-  .soc-page .soc-page-navigation { padding-top: 28px; padding-bottom: 0; }
-  .soc-page .forensics { border-top: 0; padding-top: 28px; }
+  .soc-page .soc-page-navigation { padding-top: var(--section-space); padding-bottom: 0; }
+  .soc-page .forensics { border-top: 0; padding-top: var(--section-space); }
   .soc-page .forensics h1 {
     margin: 0 0 14px;
     color: var(--ink);
@@ -51,6 +51,6 @@
 }
 
 @media (max-width: 600px) {
-  .portfolio-site .soc-preview { flex-direction: column; align-items: stretch; gap: 24px; }
+  .portfolio-site .soc-preview { flex-direction: column; align-items: stretch; gap: var(--content-gap); }
   .portfolio-site .soc-preview .soc-page-link { align-self: center; }
 }

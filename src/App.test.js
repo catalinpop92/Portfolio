@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {act} from "react-dom/test-utils";
+import {act, Simulate} from "react-dom/test-utils";
 import "./i18n";
 import App from "./App";
 
@@ -67,5 +67,31 @@ it("opens the SOC subpage, supports returning home and loads a direct link", () 
     window.history.replaceState(null, "", window.location.pathname);
     Element.prototype.scrollIntoView = originalScrollIntoView;
     scrollTo.mockRestore();
+  }
+});
+
+it("keeps the mobile menu floating when opened and restores page scrolling when closed", () => {
+  const div = document.createElement("div");
+  document.body.appendChild(div);
+  const previousOverflow = document.body.style.overflow;
+  try {
+    act(() => { ReactDOM.render(<App />, div); });
+    const button = div.querySelector(".menu-icon");
+    act(() => { Simulate.click(button); });
+    expect(button.getAttribute("aria-expanded")).toBe("true");
+    expect(div.querySelector(".site-header--open .headroom")).not.toBeNull();
+    expect(div.querySelector(".menu-open")).not.toBeNull();
+    expect(document.body.style.overflow).toBe("hidden");
+    act(() => { Simulate.keyDown(div.querySelector("header"), {key: "Escape"}); });
+    expect(button.getAttribute("aria-expanded")).toBe("false");
+    expect(document.activeElement).toBe(button);
+    expect(document.body.style.overflow).toBe(previousOverflow);
+    act(() => { Simulate.click(button); });
+    act(() => { Simulate.click(div.querySelector('nav a[href="#education"]')); });
+    expect(button.getAttribute("aria-expanded")).toBe("false");
+    expect(document.body.style.overflow).toBe(previousOverflow);
+  } finally {
+    act(() => { ReactDOM.unmountComponentAtNode(div); });
+    div.remove();
   }
 });

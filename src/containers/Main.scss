@@ -12,6 +12,8 @@
   --accent: #06727d;
   --line: #cedee2;
   --accent-soft: rgba(6, 114, 125, 0.08);
+  --section-space: 32px;
+  --content-gap: 24px;
   background: var(--page-bg);
   color: var(--ink);
   min-height: 100vh;
@@ -37,8 +39,9 @@
   }
 
   .main, .education-section, .experience-container {
-    padding: clamp(48px, 6vw, 72px) 0;
+    padding: var(--section-space) 0;
   }
+  .greet-main { padding-block: var(--section-space); }
 
   .soc-skills, .experience-container, #projects, .forensics, .education-section, .contact-margin-top {
     border-top: 1px solid var(--line);
@@ -48,16 +51,16 @@
     font-size: clamp(30px, 3.4vw, 42px);
     line-height: 1.25;
     letter-spacing: -0.025em;
-    margin: 0 0 24px;
+    margin: 0 0 var(--content-gap);
   }
   .skills-heading, .education-heading, .experience-heading, .contact-title { color: var(--ink); font-weight: 600; }
 
   .education-section {
-    --education-divider-space: 32px;
+    --education-divider-space: var(--section-space);
     padding-block: var(--education-divider-space);
   }
   .education-section > * { flex: initial; margin-bottom: 0; }
-  .education-section .education-heading { margin-bottom: 24px; }
+  .education-section .education-heading { margin-bottom: var(--content-gap); }
   .education-card-container { padding: 0; gap: 0; }
   .education-entry { padding-block: var(--education-divider-space); }
   .education-entry + .education-entry { border-top: 1px solid var(--line); }
@@ -139,7 +142,7 @@
   .details-context { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
   .portfolio-details ul { margin: 12px 0 0; }
 
-  .projects-container { gap: 24px; margin-top: 28px; }
+  .projects-container { gap: var(--content-gap); margin-top: var(--content-gap); }
   .project-subtitle { text-align: left; }
   .project-card { padding: 24px; justify-content: flex-start; }
   .project-image { height: 190px; }
@@ -154,7 +157,7 @@
   .contact-subtitle { line-height: 1.7; }
   .contact-image-div { max-width: 340px; }
   .contact-detail, .contact-detail-email { font-size: clamp(18px, 2vw, 26px); overflow-wrap: anywhere; }
-  .footer-div { margin-top: 8px; padding: 16px 24px 28px; }
+  .footer-div { margin-top: 0; padding: var(--section-space) 24px; }
   .footer-text { margin: 0; font-size: 13px; }
 
   .subTitle, .greeting-text-p, .card-subtitle,
@@ -255,10 +258,17 @@
 
 @media (max-width: 600px) {
   .portfolio-site {
+    --section-space: 24px;
+    --content-gap: 20px;
+    #main-content { text-align: center; }
+    #main-content :is(h1, h2, h3, h4, h5, h6, p, li, label, legend, summary) { text-align: center; }
+    #main-content ul { padding-inline-start: 0; list-style-position: inside; }
+    #main-content :is(button, input, select) { text-align: center; }
+    #main-content .tool-list li { justify-content: center; }
+    #main-content :is(.lab-tags, .lab-tools, .forensics-scenarios, .challenge-share) { justify-content: center; }
+    #main-content .forensics-terminal,
+    #main-content .forensics-terminal :is(p, pre, label, input) { text-align: left; }
     .main, .greet-main, .education-section, .experience-container { width: calc(100% - 40px); }
-    .main, .education-section, .experience-container { padding: 28px 0; }
-    .main, .education-section, .experience-container { padding-top: 44px; padding-bottom: 44px; }
-    .education-section { --education-divider-space: 24px; padding-block: var(--education-divider-space); }
     .header { padding: 12px 20px; }
     .header .logo { font-size: 14px; margin-top: 0; }
     .header .menu-icon { padding: 12px; }

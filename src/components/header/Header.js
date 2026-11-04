@@ -1,4 +1,4 @@
-import React, {useContext, useRef, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -23,6 +23,12 @@ export default function Header() {
   const {t, i18n} = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const menuButton = useRef(null);
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [isOpen]);
   const links = [
     [skillsSection.display, "skills", "header.skills"],
     [educationInfo.display, "education", "education.title"],
@@ -37,7 +43,7 @@ export default function Header() {
     [true, "contact", "header.contact"]
   ];
   return (
-    <Headroom disable={isOpen}>
+    <Headroom className={isOpen ? "site-header site-header--open" : "site-header"} style={{zIndex: 100}}>
       <header
         className={isDark ? "dark-menu header" : "header"}
         onKeyDown={event => {
