@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.226f40fe.css",
-    "main.js": "/Portfolio/static/js/main.a23fdb96.js",
+    "main.js": "/Portfolio/static/js/main.1ce538a8.js",
     "static/css/64.c1c41b28.chunk.css": "/Portfolio/static/css/64.c1c41b28.chunk.css",
     "static/js/64.e90a1dab.chunk.js": "/Portfolio/static/js/64.e90a1dab.chunk.js",
     "static/css/769.227ca2d6.chunk.css": "/Portfolio/static/css/769.227ca2d6.chunk.css",
     "static/js/769.8b15857d.chunk.js": "/Portfolio/static/js/769.8b15857d.chunk.js",
-    "static/media/catalin-pop-portrait.png": "/Portfolio/static/media/catalin-pop-portrait.e58cab15f695732b822e.png",
+    "static/media/catalin-pop-portrait-v2.png": "/Portfolio/static/media/catalin-pop-portrait-v2.6020dbcd5d222e23ca18.png",
     "static/media/Montserrat-Regular.ttf": "/Portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/AquaMaster.png": "/Portfolio/static/media/AquaMaster.96676da110fb86484c9a.png",
     "static/media/Agustina.woff": "/Portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -23,7 +23,7 @@
     "index.html": "/Portfolio/index.html",
     "static/media/talksCardBack.svg": "/Portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.226f40fe.css.map": "/Portfolio/static/css/main.226f40fe.css.map",
-    "main.a23fdb96.js.map": "/Portfolio/static/js/main.a23fdb96.js.map",
+    "main.1ce538a8.js.map": "/Portfolio/static/js/main.1ce538a8.js.map",
     "64.c1c41b28.chunk.css.map": "/Portfolio/static/css/64.c1c41b28.chunk.css.map",
     "64.e90a1dab.chunk.js.map": "/Portfolio/static/js/64.e90a1dab.chunk.js.map",
     "769.227ca2d6.chunk.css.map": "/Portfolio/static/css/769.227ca2d6.chunk.css.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.226f40fe.css",
-    "static/js/main.a23fdb96.js"
+    "static/js/main.1ce538a8.js"
   ]
 }
